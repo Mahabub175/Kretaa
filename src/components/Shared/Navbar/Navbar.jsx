@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="sticky top-0 w-full z-50 py-5 bg-white">
       <div className="my-container flex items-center justify-between">
         <Link href="/">
-          <span className="text-xl font-bold">MyLogo</span>
+          <span className="text-xl font-bold text-primary">Kretaa</span>
         </Link>
 
         <div className="hidden md:flex space-x-10">

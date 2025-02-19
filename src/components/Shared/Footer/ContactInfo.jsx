@@ -7,7 +7,7 @@ const ContactInfo = () => {
     <div className="">
       <div className="mb-10">
         <Link href="/">
-          <span className="text-xl font-bold">MyLogo</span>
+          <span className="text-xl font-bold text-primary">Kretaa</span>
         </Link>
       </div>
       <h3 className="text-lg font-bold mb-6">Need help?</h3>
