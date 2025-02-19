@@ -8,18 +8,14 @@ const Brand = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://viscarttoolsapi.moonsgallerysystem.com/api/v1/brand/`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setData(result?.data?.results);
-      } catch (error) {
-      } finally {
+      const response = await fetch(
+        `https://viscarttoolsapi.moonsgallerysystem.com/api/v1/brand/`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
+      const result = await response.json();
+      setData(result?.data?.results);
     };
 
     fetchData();
