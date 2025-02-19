@@ -4,6 +4,7 @@ import Link from "next/link";
 import useFetchData from "@/utils/hooks/useFetchData";
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
 import Image from "next/image";
+import dayjs from "dayjs";
 
 const AllBlogs = () => {
   const { data, loading } = useFetchData("/blogs?depth=3");
@@ -14,7 +15,7 @@ const AllBlogs = () => {
       {loading ? (
         <LoadingAnimation />
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {data?.map((item) => (
             <div
               key={item.id}
@@ -31,7 +32,7 @@ const AllBlogs = () => {
                 <h3 className="font-medium">{item.title}</h3>
                 <div className="flex justify-between items-center mt-6">
                   <p className="text-gray-600">
-                    {item?.published_at || "2015-07-12"}
+                    {dayjs(item?.post_date_time).format("YYYY-MM-DD")}
                   </p>
                   <Link
                     href={`/blog/${item?.slug}`}

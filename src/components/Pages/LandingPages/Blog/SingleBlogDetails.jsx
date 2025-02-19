@@ -8,7 +8,8 @@ import { FaCalendar, FaEye } from "react-icons/fa";
 const SingleBlogDetails = ({ params }) => {
   const { data, loading } = useFetchData("/blogs?depth=3");
 
-  const item = data?.find((item) => item.slug === params);
+  const item = data?.find((item) => item?.slug === params);
+
   return (
     <>
       {loading ? (
@@ -25,11 +26,11 @@ const SingleBlogDetails = ({ params }) => {
           <div className="flex justify-start items-center gap-10 mt-5 lg:mt-10 p-2">
             <div className="flex items-center gap-2">
               <FaCalendar />
-              <p>{item?.publishedAt}</p>
+              <p>{dayjs(item?.post_date_time).format("YYYY-MM-DD")}</p>
             </div>
             <div className="flex items-center gap-2">
               <FaEye />
-              <p>{item?.views || 0}</p>
+              <p>{item?.visitors || 0}</p>
             </div>
           </div>
           <div className="p-2 mt-5 lg:mt-10">
