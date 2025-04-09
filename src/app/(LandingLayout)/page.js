@@ -5,7 +5,6 @@ import DemoSlider from "@/components/Pages/LandingPages/Home/DemoSlider";
 import Feature from "@/components/Pages/LandingPages/Home/Feature";
 import Promotion from "@/components/Pages/LandingPages/Home/Promotion";
 import SmallFeature from "@/components/Pages/LandingPages/Home/SmallFeature";
-import Timeline from "@/components/Pages/LandingPages/Home/Timeline";
 import WhyUs from "@/components/Pages/LandingPages/Home/WhyUs";
 import FAQ from "@/components/Shared/Components/FAQ";
 import ReviewSlider from "@/components/Shared/Components/ReviewSlider";
@@ -21,9 +20,8 @@ const Home = () => {
         <WhyUs />
       </div>
       <Brand />
-      <Timeline />
-      <DemoSlider />
       <Feature />
+      <DemoSlider />
       <Promotion />
       <ReviewSlider />
       <FAQ />

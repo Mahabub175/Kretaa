@@ -7,26 +7,20 @@ const Feature = () => {
   const { data } = useFetchData("/services/");
 
   return (
-    <section className="my-container py-10">
-      <h1 className="text-center text-3xl lg:text-6xl font-bold mb-10 lg:mb-20">
-        Our Features
+    <section className="my-container py-10 my-10">
+      <h1 className="text-center text-3xl lg:text-6xl font-medium mb-10 lg:mb-20 font-bricolage">
+        Our Core <span className="font-semibold text-primary">Features</span>
       </h1>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
         {data?.map((item) => (
           <div
-            key={item.id}
-            className="border-2 border-primary/40 p-5 rounded-xl hover:border-primary duration-300 flex flex-col justify-center items-center text-center gap-5"
+            key={item?.id}
+            className="bg-white p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-full lg:w-[45%] xl:w-[30%] h-[250px]"
           >
-            <Image
-              src={item.icon}
-              alt={item?.title}
-              className="object-cover lg:w-[100px] lg:h-[100px]"
-              width={100}
-              height={100}
-            />
-            <div className="lg:w-5/6">
-              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-xs lg:text-sm">{item.description}</p>
+            <Image src={item?.icon} alt={item?.title} width={60} height={60} />
+            <div className="w-full">
+              <p className="text-lg mb-2 font-medium">{item?.title}</p>
+              <p className="">{item?.description}</p>
             </div>
           </div>
         ))}
