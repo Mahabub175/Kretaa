@@ -58,8 +58,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-
-        <hr className="mt-10 border-textColor" />
+        <hr className="mt-10 border-primaryLight my-container" />
 
         <div className="flex flex-col md:flex-row gap-5 lg:gap-0 justify-between items-center py-5 my-container">
           <p className="font-medium">
