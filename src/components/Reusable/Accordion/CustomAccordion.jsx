@@ -23,6 +23,7 @@ const CustomAccordion = ({ items }) => {
             <motion.div
               animate={{ rotate: openIndex === index ? 180 : 0 }}
               transition={{ duration: 0.3 }}
+              className="bg-white rounded-full p-2 shadow-lg"
             >
               <FiChevronDown className="text-xl transition-transform" />
             </motion.div>

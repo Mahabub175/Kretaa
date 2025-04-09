@@ -13,7 +13,9 @@ const FAQ = () => {
         style={{ backgroundImage: `url('/design.png')` }}
       />
       <div className="relative z-10 text-center">
-        <h1 className="text-3xl lg:text-6xl font-bold mb-5">FAQ</h1>
+        <h1 className="text-3xl lg:text-6xl font-semibold mb-5 font-bricolage">
+          FAQs
+        </h1>
         <p className="text-base lg:text-xl text-gray-500 mb-10 lg:mb-20">
           Kretaa gives you the scoop on what customers are really into. By
           diving <br className="hidden lg:block" />
