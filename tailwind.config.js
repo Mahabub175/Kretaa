@@ -15,6 +15,9 @@ export default {
         primaryDark: "#0C4A6E",
         textColor: "#18181B",
       },
+      boxShadow: {
+        xl: "0 0 8px 2px #E0F2FE",
+      },
       screens: {
         sm: "580px",
         md: "600px",

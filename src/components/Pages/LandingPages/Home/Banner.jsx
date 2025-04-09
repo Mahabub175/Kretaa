@@ -24,7 +24,7 @@ const Banner = () => {
             height={1000}
             className="absolute w-full -right-[20%] -z-10 -translate-x-10"
           />
-          <div className="text-center w-full xxl:w-8/12 my-container">
+          <div className="text-center w-full xxl:w-5/12 my-container">
             <div className="flex justify-center items-center gap-4 mb-5">
               <Image src={avatar} alt="avatar" width={100} height={100} />
               <p>
@@ -35,7 +35,7 @@ const Banner = () => {
             <h2 className="text-3xl lg:text-6xl font-semibold mb-4 lg:mb-6 tracking-wide">
               {data?.[0]?.title}
             </h2>
-            <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] lg:w-5/6 mx-auto text-textColor">
+            <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor">
               {data?.[0]?.description}
             </p>
             <div className="flex flex-col lg:flex-row items-center gap-5 justify-center">

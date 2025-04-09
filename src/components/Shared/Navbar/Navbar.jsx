@@ -28,7 +28,7 @@ const Navbar = () => {
           <span className="text-xl font-bold text-primary">Kretaa</span>
         </Link>
 
-        <div className="hidden md:flex space-x-10 bg-primaryLight px-10 py-3 rounded-full">
+        <div className="hidden lg:flex space-x-10 bg-primaryLight px-10 py-3 rounded-full">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -42,7 +42,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <Link href="/contact">
             <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
               Contact
@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RxCross1 size={24} /> : <IoMenu size={24} />}
         </button>
       </div>
