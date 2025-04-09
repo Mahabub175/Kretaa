@@ -1,43 +1,39 @@
 "use client";
 
+import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
+import useFetchData from "@/utils/hooks/useFetchData";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 
-const Brand = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(
-        `https://viscarttoolsapi.moonsgallerysystem.com/api/v1/brand/`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const result = await response.json();
-      setData(result?.data?.results);
-    };
-
-    fetchData();
-  }, []);
+const Connections = () => {
+  const { data, loading, error } = useFetchData("/clients/");
 
   return (
-    <section className="my-container flex flex-wrap gap-10 justify-center items-center -mt-10 mb-20">
-      {data?.map((item) => (
-        <div
-          key={item?._id}
-          className="hover:scale-105 p-5 rounded-xl border border-transparent hover:border-primary duration-300 transition-all"
-        >
-          <Image
-            src={item?.attachment}
-            alt={item?.name}
-            width={200}
-            height={200}
-          />
-        </div>
-      ))}
+    <section className="bg-primaryLight py-10">
+      <section className="my-container">
+        {loading ? (
+          <LoadingAnimation />
+        ) : error ? (
+          <p className="text-center text-red-500">
+            Failed to load client logos. Please try again later.
+          </p>
+        ) : (
+          <Marquee className="flex items-center justify-between">
+            {data?.map((item) => (
+              <Image
+                key={item?.id}
+                src={item?.image}
+                alt={item?.name ?? "logo"}
+                width={200}
+                height={200}
+                className="mx-10 lg:mx-20"
+              />
+            ))}
+          </Marquee>
+        )}
+      </section>
     </section>
   );
 };
 
-export default Brand;
+export default Connections;
