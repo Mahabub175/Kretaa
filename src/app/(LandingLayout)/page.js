@@ -4,7 +4,6 @@ import CTA from "@/components/Pages/LandingPages/Home/CTA";
 import DemoSlider from "@/components/Pages/LandingPages/Home/DemoSlider";
 import Feature from "@/components/Pages/LandingPages/Home/Feature";
 import Promotion from "@/components/Pages/LandingPages/Home/Promotion";
-import SmallFeature from "@/components/Pages/LandingPages/Home/SmallFeature";
 import WhyUs from "@/components/Pages/LandingPages/Home/WhyUs";
 import FAQ from "@/components/Shared/Components/FAQ";
 import ReviewSlider from "@/components/Shared/Components/ReviewSlider";
@@ -13,9 +12,6 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <Banner />
-      <div className="relative z-10">
-        <SmallFeature />
-      </div>
       <WhyUs />
       <Brand />
       <Feature />
