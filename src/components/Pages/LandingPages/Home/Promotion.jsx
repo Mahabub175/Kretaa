@@ -17,7 +17,7 @@ const Promotion = () => {
       <div className="pb-20">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-10 my-container">
           <div className="text-center lg:text-left">
-            <h3 className="text-3xl lg:text-6xl mb-6 font-medium">
+            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-bricolage">
               Kretaa's Shop <br />{" "}
               <span className="text-primary font-bold">Automation Tool</span>
             </h3>

@@ -4,6 +4,7 @@ import CTA from "@/components/Pages/LandingPages/Home/CTA";
 import DemoSlider from "@/components/Pages/LandingPages/Home/DemoSlider";
 import Feature from "@/components/Pages/LandingPages/Home/Feature";
 import Promotion from "@/components/Pages/LandingPages/Home/Promotion";
+import Timeline from "@/components/Pages/LandingPages/Home/Timeline";
 import WhyUs from "@/components/Pages/LandingPages/Home/WhyUs";
 import FAQ from "@/components/Shared/Components/FAQ";
 import ReviewSlider from "@/components/Shared/Components/ReviewSlider";
@@ -14,6 +15,7 @@ const Home = () => {
       <Banner />
       <WhyUs />
       <Brand />
+      <Timeline />
       <Feature />
       <DemoSlider />
       <Promotion />

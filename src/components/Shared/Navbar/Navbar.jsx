@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", link: "/" },
+  { name: "Feature", link: "/feature" },
   { name: "Customer", link: "/customer" },
   { name: "Pricing", link: "/pricing" },
   { name: "Demo", link: "/demo" },
@@ -34,7 +35,9 @@ const Navbar = () => {
               key={link.name}
               href={link.link}
               className={`hover:text-primary duration-300 font-medium ${
-                pathname === link?.link ? "text-primary" : ""
+                pathname === link?.link
+                  ? "text-white blue-gradient rounded-full px-5 py-1"
+                  : "py-1"
               }`}
             >
               {link.name}
