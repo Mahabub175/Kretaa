@@ -18,3 +18,7 @@
 .my-container {
   @apply mx-auto container px-2 sm:px-6 lg:px-8;
 }
+
+.blue-gradient {
+  background: var(--Linear, linear-gradient(90deg, #1e90ff 0%, #63b3ed 100%));
+}
