@@ -8,11 +8,11 @@ const WhyUs = () => {
   const { data } = useFetchData("/facilities?depth=3");
 
   return (
-    <section className="-mt-20 mb-20 pb-10 lg:pb-0">
+    <section className="-mt-20 mb-20">
       <div className="my-container">
         <h2 className="text-center text-2xl lg:text-6xl font-semibold pt-32 lg:pt-44 tracking-wide font-bricolage">
           Why <span className="font-bold text-primary">Kretaa</span> is a Game
-          Changer <br /> for Your Online Shop
+          Changer <br className="hidden lg:block" /> for Your Online Shop
         </h2>
         <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
           {data?.[0]?.facilities_item?.map((item) => (
