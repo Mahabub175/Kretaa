@@ -1,24 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import office from "@/assets/images/office.png";
+import steps from "@/assets/images/steps.png";
 
 const Timeline = () => {
   return (
-    <section className="relative w-full lg:py-10 my-container">
-      <div className="flex flex-col xl:flex-row justify-center items-center w-full">
-        <div className="blue-gradient text-white text-3xl lg:text-4xl  font-semibold px-5 flex justify-center items-center w-[700px] h-[209px] text-center">
-          <p>
-            Getting your website <br /> up and running
-          </p>
-        </div>
-        <Image
-          src={office}
-          alt="office"
-          className="object-cover"
-          width={700}
-          height={500}
-        />
+    <section className="relative w-full py-10 lg:py-32 bg-primaryLight mt-32 overflow-hidden">
+      <div className="my-container relative z-10">
+        <h1 className="text-center text-3xl lg:text-6xl font-medium mb-10 lg:mb-20 font-bricolage">
+          Website Setup{" "}
+          <span className="font-semibold text-primary">Process</span>
+        </h1>
+        <Image src={steps} alt="steps" className="w-full" />
       </div>
     </section>
   );
