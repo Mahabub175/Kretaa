@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <SmallFeature />
       </div>
       <div className="relative z-0">
@@ -27,7 +27,7 @@ const Home = () => {
       <Promotion />
       <ReviewSlider />
       <FAQ />
-      <CTA />
+      <CTA /> */}
     </>
   );
 };
