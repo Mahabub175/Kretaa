@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 const ContactInfo = () => {
   return (
-    <div className="">
+    <div className="px-5">
       <div className="mb-10">
         <Link href="/">
           <span className="text-xl font-bold text-primary">Kretaa</span>

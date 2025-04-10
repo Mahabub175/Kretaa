@@ -64,7 +64,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden flex flex-col space-y-4 mt-4 p-4 bg-white shadow-lg"
+            className="lg:hidden flex flex-col items-center space-y-4 mt-4 p-4 bg-white shadow-lg"
           >
             {links.map((link) => (
               <Link

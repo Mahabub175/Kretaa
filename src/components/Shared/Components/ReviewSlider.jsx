@@ -6,11 +6,17 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import useFetchData from "@/utils/hooks/useFetchData";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 
 const ReviewSlider = () => {
   const swiperRef = useRef();
+  const [activeIndex, setActiveIndex] = useState(0); // Active index state
   const { data } = useFetchData("/testimonials/");
+
+  // Function to handle slide change and set active index
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
 
   return (
     <section className="my-container relative lg:my-20">
@@ -23,6 +29,7 @@ const ReviewSlider = () => {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        onSlideChange={handleSlideChange} // Trigger on slide change
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
@@ -38,9 +45,13 @@ const ReviewSlider = () => {
         }}
         className="mySwiper mt-10"
       >
-        {data?.map((item) => (
+        {data?.map((item, index) => (
           <SwiperSlide key={item.id}>
-            <div className="lg:w-[400px] mx-auto mb-10 flex flex-col items-center lg:items-start">
+            <div
+              className={`lg:w-[400px] mx-auto mb-10 flex flex-col items-center lg:items-start transition-opacity duration-300 ${
+                index === activeIndex + 1 ? "opacity-100" : "opacity-50"
+              }`}
+            >
               <Image
                 src={item?.image}
                 alt="Reviewer"

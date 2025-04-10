@@ -16,7 +16,7 @@ const FAQ = () => {
         <h1 className="text-4xl lg:text-6xl font-semibold mb-5 font-bricolage">
           FAQs
         </h1>
-        <p className="text-sm lg:text-xl text-gray-500 mb-10 lg:mb-20">
+        <p className="text-sm lg:text-xl text-gray-500 mb-10 lg:mb-20 px-3">
           Kretaa gives you the scoop on what customers are really into. By
           diving <br className="hidden lg:block" />
           into social media trends, businesses can tweak their game plans.

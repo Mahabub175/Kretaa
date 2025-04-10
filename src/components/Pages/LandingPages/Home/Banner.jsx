@@ -27,7 +27,7 @@ const Banner = () => {
           />
           <div className="my-container flex flex-col justify-center items-center">
             <div className="text-center w-full xl:w-7/12 xxl:w-6/12">
-              <div className="flex justify-center items-center gap-4 mb-5">
+              <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-5">
                 <Image src={avatar} alt="avatar" width={100} height={100} />
                 <p>
                   Join with{" "}

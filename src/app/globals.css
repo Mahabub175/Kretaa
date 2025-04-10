@@ -19,6 +19,10 @@
   @apply mx-auto container px-2 lg:px-8;
 }
 
+.animated-underline {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100;
+}
+
 .blue-gradient {
   background: var(--Linear, linear-gradient(90deg, #1e90ff 0%, #63b3ed 100%));
 }
@@ -63,12 +67,8 @@
   border-radius: 132px 132px 8px 8px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 980px) {
   .service-radius {
     border-radius: 15px 15px 15px 15px;
   }
-}
-
-.animated-underline {
-  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100;
 }
