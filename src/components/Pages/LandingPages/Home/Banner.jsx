@@ -46,13 +46,13 @@ const Banner = () => {
                     data?.[0]?.button_link ? data?.[0]?.button_link : "/contact"
                   }`}
                 >
-                  <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-14 py-2.5 rounded-full font-medium">
+                  <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
                     Explore
                     <CgArrowTopRight className="inline-block ml-1" />
                   </button>
                 </Link>
                 <Link href="/pricing">
-                  <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-14 py-2.5 rounded-full font-medium">
+                  <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
                     See Plans
                   </button>
                 </Link>

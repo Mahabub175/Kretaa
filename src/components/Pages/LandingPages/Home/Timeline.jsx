@@ -20,7 +20,7 @@ const Timeline = () => {
         <Image
           src={timeline}
           alt="timeline"
-          className="w-full h-fit lg:hidden"
+          className="w-full h-fit lg:hidden px-2"
         />
       </div>
     </section>
