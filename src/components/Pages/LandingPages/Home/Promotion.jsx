@@ -13,31 +13,15 @@ const Promotion = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="py-10">
-      <div className="bg-primary p-10">
-        <div className="my-container rounded-xl p-10 text-white text-2xl lg:text-5xl font-medium text-center bg-[#0A94D2]">
-          Let&apos;s boost sales while keeping{" "}
-          <br className="hidden lg:block" /> marketing costs low!
-        </div>
-      </div>
-      <div
-        style={{
-          backgroundImage: `url('/big-bg.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-        }}
-        className="pt-10 pb-20"
-      >
-        <div className="flex flex-col lg:flex-row items-center justify-between mt-10 lg:mt-20 my-container">
+    <section className="lg:py-10 pb-10 lg:pb-0">
+      <div className="pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-10 my-container">
           <div className="text-center lg:text-left">
-            <h3 className="text-3xl lg:text-6xl mb-6 text-primary font-bold">
-              {ctaData?.[0]?.name}
+            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-bricolage">
+              Kretaa&apos;s Shop <br />{" "}
+              <span className="text-primary font-bold">Automation Tool</span>
             </h3>
-            <p className="lg:text-lg text-white/70 lg:w-4/6">
-              {ctaData?.[0]?.description}
-            </p>
+            <p className="lg:text-lg lg:w-4/6">{ctaData?.[0]?.description}</p>
           </div>
           <div className="relative mt-10 lg:mt-0">
             <div
@@ -50,24 +34,24 @@ const Promotion = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-container -mt-10">
+      <div className="grid grid-cols-3 gap-5 lg:gap-10 my-container -mt-10">
         {counterData?.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-5 bg-primaryDark p-8 rounded-xl"
+            className="flex flex-col lg:flex-row items-center gap-5 blue-gradient px-1 py-4 lg:p-8 rounded-xl"
           >
             <Image
               src={item.image}
               alt={item?.title}
-              className="object-cover w-[80px] h-[80px]"
+              className="object-cover w-10 h-10 lg:w-[80px] lg:h-[80px]"
               width={80}
               height={80}
             />
-            <div>
-              <h3 className="text-white text-4xl font-semibold">
-                {item.number} +
+            <div className="text-center lg:text-left -mt-4 lg:-mt-0">
+              <h3 className="text-white text-xl lg:text-4xl font-semibold">
+                {item.number}+
               </h3>
-              <p className="text-white text-xl">{item.title}</p>
+              <p className="text-white text-sm lg:text-xl">{item.title}</p>
             </div>
           </div>
         ))}

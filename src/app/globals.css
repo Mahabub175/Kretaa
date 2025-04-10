@@ -16,7 +16,57 @@
 }
 
 .my-container {
-  @apply mx-auto container px-2 sm:px-6 lg:px-8;
+  @apply mx-auto container px-2 lg:px-8;
+}
+
+.blue-gradient {
+  background: var(--Linear, linear-gradient(90deg, #1e90ff 0%, #63b3ed 100%));
+}
+
+.builder-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 255, 105, 0.2) 0%,
+    rgba(99, 166, 237, 0.2) 100%
+  );
+  /* box-shadow: 0 0 35px rgba(99, 166, 237, 0.3), 0 0 50px rgba(99, 166, 237, 0.3); */
+}
+
+.team-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 30, 30, 0.2) 0%,
+    rgba(202, 237, 99, 0.2) 100%
+  );
+  /* box-shadow: 0 0 35px rgba(202, 237, 99, 0.2), 0 0 50px rgba(202, 237, 99, 0.2); */
+}
+
+.client-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(90, 30, 255, 0.2) 0%,
+    rgba(237, 101, 99, 0.2) 100%
+  );
+  /* box-shadow: 0 0 35px rgba(237, 101, 99, 0.2), 0 0 50px rgba(237, 101, 99, 0.2); */
+}
+
+.experience-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 244, 255, 0.2) 0%,
+    rgba(99, 111, 237, 0.2) 100%
+  );
+  /* box-shadow: 0 0 35px rgba(99, 111, 237, 0.2), 0 0 50px rgba(99, 111, 237, 0.2); */
+}
+
+.service-radius {
+  border-radius: 132px 132px 8px 8px;
+}
+
+@media (max-width: 640px) {
+  .service-radius {
+    border-radius: 15px 15px 15px 15px;
+  }
 }
 
 .animated-underline {

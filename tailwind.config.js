@@ -7,12 +7,26 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        bricolage: ["var(--font-bricolage)", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#0EA5E9",
         primaryLight: "#E0F2FE",
         primaryDark: "#0C4A6E",
+        textColor: "#18181B",
+      },
+      boxShadow: {
+        xl: "0 0 8px 2px #E0F2FE",
+      },
+      screens: {
+        sm: "580px",
+        md: "600px",
+        lg: "980px",
+        xl: "1280px",
+        xxl: "1600px",
       },
     },
   },

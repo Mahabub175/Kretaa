@@ -1,81 +1,67 @@
 "use client";
 
-import Image from "next/image";
-import banner from "@/assets/images/banner.png";
-import bg from "@/assets/images/bg.png";
-import { FaPlay } from "react-icons/fa";
-import { useState } from "react";
-import CustomModal from "@/components/Reusable/Modal/CustomModal";
-import Link from "next/link";
-import useFetchData from "@/utils/hooks/useFetchData";
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
+import useFetchData from "@/utils/hooks/useFetchData";
+import Link from "next/link";
+import { CgArrowTopRight } from "react-icons/cg";
+import right from "@/assets/images/right.png";
+import avatar from "@/assets/images/avatar.png";
+import Image from "next/image";
+import SmallFeature from "./SmallFeature";
 
 const Banner = () => {
-  const [open, setOpen] = useState(false);
   const { data, loading } = useFetchData("/hero/");
 
   return (
-    <section className="my-container relative">
+    <section className="relative overflow-hidden">
       {loading ? (
         <LoadingAnimation />
       ) : (
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="">
-            <Image
-              src={bg}
-              alt="banner"
-              width={1000}
-              height={1000}
-              className="absolute top-0 right-1/2 left-1/2 -translate-x-1/2 -z-10 h-[600px] lg:h-[800px] w-[1500px]"
-            />
-            <div className="absolute top-0 left-0 w-full h-1/6 lg:h-1/3 bg-gradient-to-b from-white via-transparent to-transparent -z-10"></div>
-          </div>
-
-          <div className="text-center lg:text-left lg:w-4/6">
-            <h2 className="text-3xl lg:text-6xl font-bold mb-6">
-              {data?.[0]?.title}
-            </h2>
-            <p className="text-xl mb-8 leading-[30px]">
-              {data?.[0]?.description}
-            </p>
-            <Link
-              href={`${
-                data?.[0]?.button_link ? data?.[0]?.button_link : "/contact"
-              }`}
-            >
-              <button className="text-white bg-primary px-16 py-3 rounded-lg font-bold">
-                {data?.[0]?.button_text ? data?.[0]?.button_text : "Contact"}
-              </button>
-            </Link>
-          </div>
-          <div className="relative mt-10 lg:mt-0">
-            <div
-              className="bg-primary p-4 rounded-full absolute top-[45%] left-8 animate-pulse"
-              onClick={() => setOpen(true)}
-            >
-              <FaPlay className="text-3xl text-white" />
+        <div className="flex flex-col items-center justify-center my-10">
+          <Image
+            src={right}
+            alt="right"
+            width={1000}
+            height={1000}
+            className="absolute w-full h-[700px] -right-[20%] -z-10 -translate-x-10 -translate-y-64 hidden xl:block"
+          />
+          <div className="my-container flex flex-col justify-center items-center">
+            <div className="text-center w-full xl:w-7/12 xxl:w-6/12">
+              <div className="flex justify-center items-center gap-4 mb-5">
+                <Image src={avatar} alt="avatar" width={100} height={100} />
+                <p>
+                  Join with{" "}
+                  <span className="font-bold">500+ Satisfied Clients</span>
+                </p>
+              </div>
+              <h2 className="text-3xl lg:text-6xl font-semibold mb-4 lg:mb-6 tracking-wide font-bricolage">
+                {data?.[0]?.title}
+              </h2>
+              <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor">
+                {data?.[0]?.description}
+              </p>
+              <div className="flex flex-col lg:flex-row items-center gap-5 justify-center">
+                <Link
+                  href={`${
+                    data?.[0]?.button_link ? data?.[0]?.button_link : "/contact"
+                  }`}
+                >
+                  <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
+                    Explore
+                    <CgArrowTopRight className="inline-block ml-1" />
+                  </button>
+                </Link>
+                <Link href="/pricing">
+                  <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
+                    See Plans
+                  </button>
+                </Link>
+              </div>
             </div>
-            <Image
-              src={data?.[0]?.image ?? banner}
-              alt="banner"
-              width={600}
-              height={400}
-            />
+            <SmallFeature />
           </div>
         </div>
       )}
-      <CustomModal isOpen={open} setOpen={setOpen}>
-        <div className="mx-auto w-full">
-          <iframe
-            src={data?.[0]?.video_link}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="w-[360px] h-[225px] lg:w-[600px] lg:h-[338px] mx-auto"
-          ></iframe>
-        </div>
-      </CustomModal>
     </section>
   );
 };

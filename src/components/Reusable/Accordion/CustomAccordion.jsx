@@ -16,15 +16,16 @@ const CustomAccordion = ({ items }) => {
       {items?.map((item, index) => (
         <div key={item?.id} className="border rounded-lg overflow-hidden">
           <button
-            className="w-full text-left p-4 bg-white font-semibold flex justify-between items-center text-lg"
+            className="w-full text-left p-4 bg-white font-semibold flex justify-between items-center lg:text-lg"
             onClick={() => toggleAccordion(index)}
           >
             {item?.question}
             <motion.div
               animate={{ rotate: openIndex === index ? 180 : 0 }}
               transition={{ duration: 0.3 }}
+              className="bg-white rounded-full p-2 shadow-lg"
             >
-              <FiChevronDown className="text-xl transition-transform" />
+              <FiChevronDown className="lg:text-xl transition-transform" />
             </motion.div>
           </button>
           <AnimatePresence>

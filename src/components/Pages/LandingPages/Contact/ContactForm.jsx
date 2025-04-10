@@ -47,12 +47,12 @@ const ContactForm = () => {
     }
   };
   return (
-    <section className="max-w-4xl mx-auto my-5 lg:my-10 relative">
+    <section className="max-w-4xl px-5 mx-auto my-5 lg:my-10 relative -mb-20">
       <div className="text-center mb-10">
-        <h1 className="text-3xl lg:text-5xl font-semibold mb-4">
-          What is Kretaa?
+        <h1 className="text-3xl lg:text-5xl font-semibold mb-4 font-bricolage">
+          What is <span className="font-bold text-primary">Kretaa?</span>
         </h1>
-        <p>
+        <p className="text-sm lg:text-base">
           Kretaa is an easy e-commerce automation tool that helps you quickly
           create landing pages and websites without any tech skills. It
           simplifies your online business, saves time, and cuts costs so you can
@@ -71,7 +71,7 @@ const ContactForm = () => {
       />
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 bg-primaryLight p-5 lg:p-10 rounded-xl max-w-2xl mx-auto z-10 my-20"
+        className="space-y-4 bg-primaryLight px-5 py-10 lg:p-10 rounded-xl max-w-2xl mx-auto z-10 my-10 lg:my-20"
       >
         <CustomInput
           name="name"

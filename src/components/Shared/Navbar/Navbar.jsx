@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", link: "/" },
-  // { name: "About", link: "/about" },
+  { name: "Customer", link: "/customer" },
   { name: "Pricing", link: "/pricing" },
   { name: "Demo", link: "/demo" },
   { name: "Blog", link: "/blog" },
@@ -22,19 +22,21 @@ const Navbar = () => {
   // const { data } = useFetchData("/system-assets/");
 
   return (
-    <nav className="sticky top-0 w-full z-50 py-5 bg-white">
+    <nav className="sticky top-0 w-full z-50 py-3 lg:py-5 bg-white shadow">
       <div className="my-container flex items-center justify-between">
         <Link href="/">
           <span className="text-xl font-bold text-primary">Kretaa</span>
         </Link>
 
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden lg:flex space-x-10 bg-primaryLight px-10 py-3 rounded-full">
           {links.map((link) => (
             <Link
               key={link.name}
               href={link.link}
-              className={`hover:text-primary duration-300 font-medium ${
-                pathname === link?.link ? "text-primary" : ""
+              className={`duration-300 font-medium ${
+                pathname === link?.link
+                  ? "text-white blue-gradient rounded-full px-5 py-1"
+                  : "py-1 hover:text-primary"
               }`}
             >
               {link.name}
@@ -42,16 +44,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <Link href="/contact">
-            <button className="text-white bg-primary px-10 py-2 rounded-lg font-bold">
+            <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
               Contact
             </button>
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RxCross1 size={24} /> : <IoMenu size={24} />}
         </button>
       </div>
@@ -75,7 +76,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link href="/contact">
-              <button className="text-white bg-primary px-10 py-2 rounded-lg font-bold">
+              <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
                 Contact
               </button>
             </Link>
