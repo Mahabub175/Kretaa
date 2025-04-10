@@ -13,16 +13,21 @@ const PricingList = () => {
     useFetchData("/pricing?depth=3");
 
   return (
-    <section>
+    <section className="my-container mb-10 lg:mb-0">
+      <h1 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-bricolage">
+        Automate your business with <br className="hidden lg:block" />
+        <span className="font-semibold text-primary">Kretaa</span> E-Commerce!
+      </h1>
+
       {featureLoading || pricingLoading ? (
         <LoadingAnimation />
       ) : (
-        <div className="my-container pt-10">
+        <div className="">
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-primaryLight">
-                  <th className="p-4 text-xl text-left border-r-8 border-white">
+                  <th className="p-4 lg:text-xl text-left border-r-8 border-white">
                     Perfect Package for you
                   </th>
                   {pricingData?.[0]?.package?.map((plan) => (
@@ -30,7 +35,9 @@ const PricingList = () => {
                       key={plan.id}
                       className="p-4 text-center border-r-8 border-white"
                     >
-                      <div className="font-bold text-2xl">{plan.name}</div>
+                      <div className="font-bold text-xl lg:text-2xl">
+                        {plan.name}
+                      </div>
                       <div className="text-sm text-gray-600">
                         {plan.descriptions}
                       </div>
