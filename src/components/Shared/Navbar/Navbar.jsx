@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", link: "/" },
-  { name: "Feature", link: "/feature" },
   { name: "Customer", link: "/customer" },
   { name: "Pricing", link: "/pricing" },
   { name: "Demo", link: "/demo" },

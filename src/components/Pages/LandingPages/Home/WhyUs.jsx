@@ -7,7 +7,7 @@ const WhyUs = () => {
   const { data } = useFetchData("/facilities?depth=3");
 
   return (
-    <section className="mb-20">
+    <section className="-mt-16 lg:-mt-0 mb-20">
       <div className="my-container">
         <h2 className="text-center text-2xl lg:text-6xl font-semibold pt-16 xl:pt-20 tracking-wide font-bricolage">
           Why <span className="font-bold text-primary">Kretaa</span> is a Game
@@ -17,17 +17,18 @@ const WhyUs = () => {
           {data?.[0]?.facilities_item?.map((item) => (
             <div
               key={item?.id}
-              className="bg-white p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-full lg:w-[45%] xl:w-[30%] h-[250px]"
+              className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-start lg:justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[160px] lg:w-[45%] xl:w-[30%] h-[250px]"
             >
               <Image
                 src={item?.image}
                 alt={item?.title}
                 width={80}
                 height={80}
+                className="w-10 h-10 lg:w-16 lg:h-16 mx-auto"
               />
               <div className="w-full">
-                <p className="text-lg mb-2 font-medium">{item?.title}</p>
-                <p className="">{item?.description}</p>
+                <p className="lg:text-lg mb-2 font-medium">{item?.title}</p>
+                <p className="text-sm lg:text-base">{item?.description}</p>
               </div>
             </div>
           ))}

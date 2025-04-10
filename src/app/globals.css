@@ -62,3 +62,9 @@
 .service-radius {
   border-radius: 132px 132px 8px 8px;
 }
+
+@media (max-width: 640px) {
+  .service-radius {
+    border-radius: 15px 15px 15px 15px;
+  }
+}

@@ -78,7 +78,7 @@ const DemoSlider = () => {
               navigation={false}
               className="mySwiper"
             >
-              {data.map((item, index) => (
+              {data.map((item) => (
                 <SwiperSlide key={item.id} className="flex justify-center">
                   {({ isActive }) => {
                     const isCenter = isActive;

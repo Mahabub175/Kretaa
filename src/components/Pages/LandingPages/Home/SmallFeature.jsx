@@ -37,15 +37,15 @@ const data = [
 
 const SmallFeature = () => {
   return (
-    <section className="my-container flex flex-wrap items-end justify-center gap-5 lg:mt-20">
+    <section className="my-container flex flex-wrap items-end justify-center gap-5 mt-10 lg:mt-20">
       {data?.map((item, index) => (
         <div
           key={item.id}
           className={`${
             item.gradient
-          } flex flex-col justify-center items-center gap-5 p-5 service-radius mx-auto ${
-            index === 1 ? "h-[295px] lg:h-[370px]" : "h-[295px]"
-          } w-[300px] lg:w-[270px] xxl:w-[320px]`}
+          } flex flex-col justify-center items-center gap-5 p-2 lg:p-5 service-radius mx-auto ${
+            index === 1 ? "h-[200px] lg:h-[370px]" : "h-[200px] lg:h-[295px]"
+          } w-[160px] lg:w-[270px] xxl:w-[320px]`}
         >
           <div
             className={`flex flex-col justify-center items-center text-center h-full ${
@@ -55,9 +55,11 @@ const SmallFeature = () => {
             <Image
               src={item.image}
               alt={item.title}
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-10 h-10 lg:w-16 lg:h-16 mx-auto mb-4"
             />
-            <h3 className="text-3xl font-semibold mb-2">{item.title}</h3>
+            <h3 className="text-xl lg:text-3xl font-semibold mb-2">
+              {item.title}
+            </h3>
             <p>{item.description}</p>
           </div>
         </div>

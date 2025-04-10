@@ -7,7 +7,7 @@ const FAQ = () => {
   const { data } = useFetchData("/faqs");
 
   return (
-    <section className="relative py-20 lg:py-32 bg-primaryLight lg:mt-10">
+    <section className="relative pt-10 pb-20 lg:py-32 bg-primaryLight lg:mt-10">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/design.png')` }}

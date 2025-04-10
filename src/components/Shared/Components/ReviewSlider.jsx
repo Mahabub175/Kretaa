@@ -40,7 +40,7 @@ const ReviewSlider = () => {
       >
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="lg:w-[400px] mx-auto mb-10">
+            <div className="lg:w-[400px] mx-auto mb-10 flex flex-col items-center lg:items-start">
               <Image
                 src={item?.image}
                 alt="Reviewer"
@@ -67,13 +67,13 @@ const ReviewSlider = () => {
 
       <div className="flex items-center justify-center gap-5 mt-10">
         <button
-          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[45%] left-0 z-10"
+          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[50%] left-0 z-10"
           onClick={() => swiperRef.current.slidePrev()}
         >
           <FaAngleLeft className="text-xl" />
         </button>
         <button
-          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[45%] right-0 z-10"
+          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[50%] right-0 z-10"
           onClick={() => swiperRef.current.slideNext()}
         >
           <FaAngleRight className="text-xl" />
