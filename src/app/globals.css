@@ -72,3 +72,15 @@
     border-radius: 15px 15px 15px 15px;
   }
 }
+
+span.swiper-pagination-bullet {
+  height: 12px !important;
+  width: 12px !important;
+  background-color: #ffffff20 !important;
+  border: 2px solid #0ea5e9;
+}
+
+span.swiper-pagination-bullet-active {
+  background-color: #0ea5e9 !important;
+  border: 2px solid #0ea5e9;
+}

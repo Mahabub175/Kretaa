@@ -29,7 +29,7 @@ const ReviewSlider = () => {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        onSlideChange={handleSlideChange} // Trigger on slide change
+        onSlideChange={handleSlideChange}
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
@@ -39,6 +39,9 @@ const ReviewSlider = () => {
           1024: { slidesPerView: 3 },
         }}
         navigation={false}
+        pagination={{
+          clickable: true,
+        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
