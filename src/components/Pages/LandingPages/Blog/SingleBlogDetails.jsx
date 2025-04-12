@@ -21,11 +21,11 @@ const SingleBlogDetails = ({ params }) => {
             <Image
               src={item.thumbnail}
               alt="blog"
-              width={1600}
+              width={2000}
               height={100}
-              className="rounded-xl"
+              className="rounded-xl w-full lg:h-[600px]"
             />
-            <div className="flex justify-start items-center gap-10 mt-5 lg:mt-10 px-12 py-2 absolute bottom-0 right-0 bg-white rounded-tl-xl text-black/70">
+            <div className="flex justify-start items-center gap-10 mt-5 lg:mt-10 px-5 lg:px-12 py-2 absolute bottom-0 right-0 bg-white text-black/70 rounded-tl-xl">
               <div className="flex items-center gap-2">
                 <FaCalendar />
                 <p>{dayjs(item?.post_date_time).format("MMMM DD, YYYY")}</p>

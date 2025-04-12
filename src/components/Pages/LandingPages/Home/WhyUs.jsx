@@ -10,8 +10,9 @@ const WhyUs = () => {
     <section className="-mt-16 lg:-mt-0 mb-20">
       <div className="my-container">
         <h2 className="text-center text-2xl lg:text-6xl font-semibold pt-16 xl:pt-20 tracking-wide font-bricolage">
-          Why <span className="font-bold text-primary">Kretaa</span> is a Game
-          Changer <br className="hidden xl:block" /> for Your Online Shop
+          Why <span>Kretaa</span> is a{" "}
+          <span className="font-bold text-primary"> Game Changer</span>{" "}
+          <br className="hidden xl:block" /> for Your Online Shop
         </h2>
         <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
           {data?.[0]?.facilities_item?.map((item) => (

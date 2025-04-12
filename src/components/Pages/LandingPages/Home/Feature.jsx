@@ -31,6 +31,11 @@ const Feature = () => {
           </div>
         ))}
       </div>
+      <div className="flex items-center justify-center mt-10">
+        <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
+          See All Features
+        </button>
+      </div>
     </section>
   );
 };

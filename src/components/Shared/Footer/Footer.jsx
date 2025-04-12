@@ -42,9 +42,8 @@ const Footer = () => {
       <footer className="pt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-0 xl:gap-10 items-start justify-center my-container">
           <ContactInfo />
-
           {footerData?.map((item, i) => (
-            <div key={i}>
+            <div key={i} className="px-5">
               <h3 className="text-2xl font-bold mb-6">{item?.title}</h3>
               <ul>
                 {item?.links?.map((link, j) => (
@@ -61,7 +60,7 @@ const Footer = () => {
         <hr className="mt-10 border-primaryLight my-container" />
 
         <div className="flex flex-col md:flex-row gap-5 lg:gap-0 justify-between items-center py-5 my-container">
-          <p className="font-medium">
+          <p className="font-medium px-5 text-center">
             ©{new Date().getFullYear()}, All rights reserved By{" "}
             <a
               href="https://vitasoftsolutions.com/"
@@ -72,7 +71,7 @@ const Footer = () => {
             </a>
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 px-5">
             <Link
               href={"/"}
               target="_blank"
