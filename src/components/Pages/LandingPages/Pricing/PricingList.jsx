@@ -14,7 +14,7 @@ const PricingList = () => {
 
   return (
     <section className="my-container mb-10 lg:mb-0">
-      <h1 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-bricolage">
+      <h1 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
         Automate your business with <br className="hidden lg:block" />
         <span className="font-semibold text-primary">Kretaa</span> E-Commerce!
       </h1>

@@ -1,4 +1,4 @@
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Bricolage_Grotesque, Hind_Siliguri, Inter } from "next/font/google";
 import "./globals.css";
 import GlobalProvider from "@/provider/GlobalProvider";
 
@@ -8,8 +8,15 @@ const inter = Inter({
 });
 
 const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+  variable: "--font-hind",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const hindSiliguri = Hind_Siliguri({
+  variable: "--font-hind",
+  subsets: ["latin", "bengali"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -21,7 +28,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${bricolage.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${bricolage.variable} ${hindSiliguri.variable}  antialiased`}
+      >
         <GlobalProvider>{children}</GlobalProvider>
       </body>
     </html>

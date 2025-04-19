@@ -13,13 +13,15 @@ const FAQ = () => {
         style={{ backgroundImage: `url('/design.png')` }}
       />
       <div className="relative z-10 text-center">
-        <h1 className="text-4xl lg:text-6xl font-semibold mb-5 font-bricolage">
+        <h1 className="text-4xl lg:text-6xl font-semibold mb-5 font-hind">
           FAQs
         </h1>
-        <p className="text-sm lg:text-xl text-gray-500 mb-10 lg:mb-20 px-3">
-          Kretaa gives you the scoop on what customers are really into. By
-          diving <br className="hidden lg:block" />
-          into social media trends, businesses can tweak their game plans.
+        <p className="text-sm lg:text-xl font-hind mb-10 lg:mb-20 px-3">
+          টেকনিক্যাল ঝামেলা ছাড়াই এখন শুরু করুন নিজের অনলাইন ব্যবসা! Kreta দিয়ে
+          মাত্র কয়েক ক্লিকে তৈরি করুন ই-কমার্স{" "}
+          <br className="hidden lg:block" />
+          ওয়েবসাইট বা ল্যান্ডিংপেইজ — অল্প সময়ে, স্বল্প খরচে। Kreta একটি কমপ্লিট
+          ই-কমার্স অটোমেশন সিস্টেম।
         </p>
         <CustomAccordion items={data} />
       </div>

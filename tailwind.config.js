@@ -8,7 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bricolage: ["var(--font-bricolage)", "sans-serif"],
+        inter: ["var(--font-inter)"],
+        bricolage: ["var(--font-hind)", "sans-serif"],
+        hind: ["var(--font-hind)", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

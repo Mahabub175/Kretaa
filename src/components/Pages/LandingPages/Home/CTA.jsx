@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section className="bg-primary py-20 lg:py-32">
       <div className="my-container text-white flex flex-col items-center text-center">
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4 font-bricolage">
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4 font-hind">
           Ready to Start Your Online Business?
         </h2>
         <p className="text-lg">

@@ -32,10 +32,11 @@ const DemoSlider = () => {
     <section className="py-10 my-10 bg-primaryLight/50">
       <div className="text-center">
         <h3 className="text-3xl lg:text-6xl font-semibold mb-4">
-          Demo Version
+          <span className="text-primary">ডেমো</span> ভার্সন
         </h3>
         <p className="text-base lg:text-lg">
-          We provide lots of facilities and Unique Features
+          ডেমো ভার্সনের মাধ্যমে আমাদের সকল ফিচার এক্সপ্লোর করুন এবং বুঝুন কেন
+          আমাদের সলিউশন আপনার ব্যবসার জন্য উপযুক্ত।
         </p>
       </div>
 

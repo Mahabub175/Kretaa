@@ -26,19 +26,23 @@ const Banner = () => {
             className="absolute w-full h-[700px] -right-[20%] -z-10 -translate-x-10 -translate-y-64 hidden xl:block"
           />
           <div className="my-container flex flex-col justify-center items-center">
-            <div className="text-center w-full xl:w-7/12 xxl:w-6/12">
-              <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-5">
+            <div className="text-center w-full">
+              <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-5 font-hind">
                 <Image src={avatar} alt="avatar" width={100} height={100} />
                 <p>
-                  Join with{" "}
-                  <span className="font-bold">500+ Satisfied Clients</span>
+                  <span className="font-bold">৫০০+ সন্তুষ্ট গ্রাহকের</span>
+                  আস্থার সঙ্গে আপনার ব্যবসাও যুক্ত হোক আজই
                 </p>
               </div>
-              <h2 className="text-3xl lg:text-6xl font-semibold mb-4 lg:mb-6 tracking-wide font-bricolage">
-                {data?.[0]?.title}
+              <h2 className="text-3xl lg:text-6xl font-semibold mb-4 lg:mb-6 tracking-wide font-hind flex flex-col gap-4">
+                <span>ব্যবসা হোক ডিজিটাল,</span>
+                <span className="">ই-কমার্স হোক ঝামেলামুক্ত</span>
               </h2>
-              <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor">
-                {data?.[0]?.description}
+              <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor flex flex-col gap-2">
+                <span>
+                  অর্ডার থেকে ডেলিভারি, স্টক থেকে রিপোর্ট — সব এক প্ল্যাটফর্মে
+                </span>
+                <span>ই-কমার্স ব্যবসা এবার হবে স্মার্ট ও নির্ভরযোগ্য।</span>
               </p>
               <div className="flex flex-col lg:flex-row items-center gap-5 justify-center">
                 <Link
@@ -46,14 +50,14 @@ const Banner = () => {
                     data?.[0]?.button_link ? data?.[0]?.button_link : "/contact"
                   }`}
                 >
-                  <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
-                    Explore
+                  <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium font-hind">
+                    বিস্তারিত দেখুন
                     <CgArrowTopRight className="inline-block ml-1" />
                   </button>
                 </Link>
                 <Link href="/pricing">
-                  <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
-                    See Plans
+                  <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium font-hind">
+                    প্যাকেজ দেখুন
                   </button>
                 </Link>
               </div>

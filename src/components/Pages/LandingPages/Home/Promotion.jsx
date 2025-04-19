@@ -17,9 +17,10 @@ const Promotion = () => {
       <div className="pb-20">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-10 my-container">
           <div className="text-center lg:text-left">
-            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-bricolage">
-              Kretaa&apos;s Shop <br />{" "}
-              <span className="text-primary font-bold">Automation Tool</span>
+            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-hind">
+              Kretaa <span className="text-primary font-bold">ই-কমার্স</span>{" "}
+              <br />{" "}
+              <span className="text-primary font-bold">অটোমেশন সিস্টেম</span>
             </h3>
             <p className="lg:text-lg lg:w-4/6">{ctaData?.[0]?.description}</p>
           </div>
@@ -47,7 +48,7 @@ const Promotion = () => {
               width={80}
               height={80}
             />
-            <div className="text-center lg:text-left -mt-4 lg:-mt-0">
+            <div className="text-center lg:text-left -mt-4 lg:-mt-0 font-hind">
               <h3 className="text-white text-xl lg:text-4xl font-semibold">
                 {item.number}+
               </h3>

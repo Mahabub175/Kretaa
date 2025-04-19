@@ -11,7 +11,7 @@ const AllBlogs = () => {
 
   return (
     <section className="my-container my-5 lg:my-10">
-      <h2 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-bricolage">
+      <h2 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
         Recent
         <span className="font-semibold text-primary"> Blogs</span>
       </h2>

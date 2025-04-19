@@ -35,7 +35,7 @@ const AllDemo = () => {
 
   return (
     <section className="my-container mb-10 lg:mb-0">
-      <h2 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-bricolage">
+      <h2 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
         Our Latest
         <span className="font-semibold text-primary"> Projects</span>
       </h2>

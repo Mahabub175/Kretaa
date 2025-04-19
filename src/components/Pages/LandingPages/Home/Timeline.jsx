@@ -8,10 +8,11 @@ const Timeline = () => {
   return (
     <section className="relative w-full py-10 lg:py-32 bg-primaryLight mt-20 lg:mt-32 overflow-hidden">
       <div className="my-container relative z-10">
-        <h1 className="text-center text-3xl lg:text-6xl font-medium mb-5 lg:mb-20 font-bricolage">
-          Website Setup{" "}
-          <span className="font-semibold text-primary">Process</span>
+        <h1 className="text-center text-3xl lg:text-6xl font-medium mb-5 lg:mb-20 font-hind">
+          ওয়েবসাইট {" "}
+          <span className="font-semibold text-primary"> সেটাপ প্রসেস</span>
         </h1>
+
         <Image
           src={steps}
           alt="steps"

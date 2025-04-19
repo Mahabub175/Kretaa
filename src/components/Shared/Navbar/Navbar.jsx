@@ -8,11 +8,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "Home", link: "/" },
+  { name: "হোম", link: "/" },
   // { name: "Customer", link: "/customer" },
-  { name: "Pricing", link: "/pricing" },
-  { name: "Demo", link: "/demo" },
-  { name: "Blog", link: "/blog" },
+  { name: "প্রাইসিং", link: "/pricing" },
+  { name: "হেল্প সেন্টার", link: "/demo" },
+  { name: "ডেমো", link: "/blog" },
 ];
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.link}
-              className={`duration-300 font-medium ${
+              className={`duration-300 font-medium font-hind ${
                 pathname === link?.link
                   ? "text-white blue-gradient rounded-full px-5 py-1"
                   : "py-1 hover:text-primary"
@@ -46,8 +46,8 @@ const Navbar = () => {
 
         <div className="hidden lg:flex">
           <Link href="/contact">
-            <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
-              Contact
+            <button className="text-primary bg-primaryLight border font-hind border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
+              যোগাযোগ করুন
             </button>
           </Link>
         </div>
@@ -76,8 +76,8 @@ const Navbar = () => {
               </Link>
             ))}
             <Link href="/contact">
-              <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
-                Contact
+              <button className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-full font-medium">
+                যোগাযোগ করুন
               </button>
             </Link>
           </motion.div>

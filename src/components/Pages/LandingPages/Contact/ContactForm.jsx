@@ -49,7 +49,7 @@ const ContactForm = () => {
   return (
     <section className="max-w-4xl px-5 mx-auto my-5 lg:my-10 relative -mb-20">
       <div className="text-center mb-10">
-        <h1 className="text-3xl lg:text-5xl font-semibold mb-4 font-bricolage">
+        <h1 className="text-3xl lg:text-5xl font-semibold mb-4 font-hind">
           What is <span className="font-bold text-primary">Kretaa?</span>
         </h1>
         <p className="text-sm lg:text-base">

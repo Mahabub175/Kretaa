@@ -8,14 +8,14 @@ const Feature = () => {
 
   return (
     <section className="my-container lg:py-10 my-10">
-      <h1 className="text-center text-3xl lg:text-6xl font-medium mb-10 lg:mb-20 font-bricolage">
-        Our Core <span className="font-semibold text-primary">Features</span>
+      <h1 className="text-center text-3xl lg:text-6xl font-medium mb-10 lg:mb-20 font-hind">
+        আমাদের মূল <span className="font-semibold text-primary">ফিচারসমূহ</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
         {data?.map((item) => (
           <div
             key={item?.id}
-            className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[160px] lg:w-[45%] xl:w-[30%] h-[250px]"
+            className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[160px] lg:w-[45%] xl:w-[30%] h-[250px] font-hind"
           >
             <Image
               src={item?.icon}
@@ -25,7 +25,7 @@ const Feature = () => {
               className="w-10 h-10 lg:w-16 lg:h-16 mx-auto"
             />
             <div className="w-full">
-              <p className="lg:text-lg mb-2 font-medium">{item?.title}</p>
+              <p className="lg:text-xl mb-2 font-bold">{item?.title}</p>
               <p className="text-sm lg:text-base">{item?.description}</p>
             </div>
           </div>

@@ -10,20 +10,18 @@ import { useState, useRef } from "react";
 
 const ReviewSlider = () => {
   const swiperRef = useRef();
-  const [activeIndex, setActiveIndex] = useState(0); // Active index state
+  const [activeIndex, setActiveIndex] = useState(0);
   const { data } = useFetchData("/testimonials/");
 
-  // Function to handle slide change and set active index
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
 
   return (
     <section className="my-container relative lg:my-20">
-      <h2 className="text-center text-2xl lg:text-6xl font-semibold tracking-wide font-bricolage">
-        Insights from Our Partners <br />
-        in
-        <span className="font-bold text-primary"> Success</span>
+      <h2 className="text-center text-2xl lg:text-6xl font-semibold tracking-wide font-hind">
+        আমাদের গ্রাহকদের
+        <span className="font-bold text-primary"> সাফল্যের গল্প</span>
       </h2>
       <Swiper
         onBeforeInit={(swiper) => {
