@@ -30,7 +30,7 @@ const DemoSlider = () => {
 
   return (
     <section className="py-10 my-10 bg-primaryLight/50">
-      <div className="text-center">
+      <div className="text-center px-5">
         <h3 className="text-3xl lg:text-6xl font-semibold mb-4">
           <span className="text-primary">ডেমো</span> ভার্সন
         </h3>

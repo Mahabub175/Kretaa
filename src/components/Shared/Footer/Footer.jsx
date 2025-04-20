@@ -7,38 +7,38 @@ import ContactInfo from "./ContactInfo";
 
 const footerData = [
   {
-    title: "Customer account",
+    title: "গ্রাহকের একাউন্ট",
     links: [
-      { name: "Log in", to: "/" },
-      { name: "Sign up", to: "/" },
-      { name: "Refund Policy", to: "/" },
-      { name: "Terms and Conditions", to: "/" },
-      { name: "Privacy Policy", to: "/" },
+      { name: "লগ ইন", to: "/" },
+      { name: "সাইন আপ", to: "/" },
+      { name: "যোগাযোগ", to: "/contact" },
+      { name: "টার্মস এন্ড কন্ডিশনস", to: "/" },
+      { name: "প্রাইভেসি পলিসি", to: "/" },
     ],
   },
   {
-    title: "Required pages",
+    title: "প্রয়োজনীয় পেইজ",
     links: [
-      { name: "Features", to: "/pricing" },
-      { name: "Pricing", to: "/pricing" },
-      { name: "Help post", to: "/" },
-      { name: "Business Growth", to: "/" },
+      { name: "ফিচার", to: "/pricing" },
+      { name: "প্রাইসিং", to: "/pricing" },
+      { name: "ফ্রড চেকার", to: "/" },
+      { name: "হেল্প পোস্ট", to: "/" },
+      { name: "বিজনেস  গ্রোথ", to: "/" },
     ],
   },
   {
-    title: "By payment",
+    title: "পেমেন্ট",
     links: [
-      { name: "Payments", to: "/" },
-      { name: "Refund", to: "/" },
-      { name: "Q&A", to: "/" },
-      { name: "Privacy Policy", to: "/" },
+      { name: "পেমেন্ট গেটওয়ে", to: "/" },
+      { name: "রিফান্ড পলিসি", to: "/" },
+      { name: "প্রাইভেসি পলিসি", to: "/" },
     ],
   },
 ];
 
 const Footer = () => {
   return (
-    <section className="mb-16 lg:mb-0">
+    <section className="mb-16 lg:mb-0 font-hind">
       <footer className="pt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-0 xl:gap-10 items-start justify-center my-container">
           <ContactInfo />

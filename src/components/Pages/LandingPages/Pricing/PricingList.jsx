@@ -15,8 +15,8 @@ const PricingList = () => {
   return (
     <section className="my-container mb-10 lg:mb-0">
       <h1 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
-        Automate your business with <br className="hidden lg:block" />
-        <span className="font-semibold text-primary">Kretaa</span> E-Commerce!
+        Kretaa-এর মাধ্যমে ব্যবসা হোক সম্পূর্ণ <br className="hidden lg:block" />
+        <span className="font-semibold text-primary">অটোমেটেড ও সহজ!</span>
       </h1>
 
       {featureLoading || pricingLoading ? (
@@ -87,7 +87,7 @@ const PricingList = () => {
                             <Image
                               src={cross}
                               alt="cross"
-                              width={30}
+                              width={20}
                               height={30}
                             />
                           </div>
