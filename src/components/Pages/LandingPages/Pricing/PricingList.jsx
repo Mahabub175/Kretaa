@@ -22,7 +22,7 @@ const PricingList = () => {
       {featureLoading || pricingLoading ? (
         <LoadingAnimation />
       ) : (
-        <div className="">
+        <div>
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
@@ -96,6 +96,22 @@ const PricingList = () => {
                     ))}
                   </tr>
                 ))}
+
+                <tr className="">
+                  <td className="p-4 font-medium border-r-8 border-white"></td>
+                  {pricingData?.[0]?.package?.map((plan) => (
+                    <td
+                      key={plan.id}
+                      className="p-4 border-r-8 border-white text-center"
+                    >
+                      <button className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-lg font-medium">
+                        {plan?.name === "Custom"
+                          ? " যোগাযোগ করুন"
+                          : "অর্ডার করুন"}
+                      </button>
+                    </td>
+                  ))}
+                </tr>
               </tbody>
             </table>
           </div>

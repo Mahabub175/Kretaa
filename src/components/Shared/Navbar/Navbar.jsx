@@ -11,8 +11,8 @@ const links = [
   { name: "হোম", link: "/" },
   // { name: "Customer", link: "/customer" },
   { name: "প্রাইসিং", link: "/pricing" },
-  { name: "হেল্প সেন্টার", link: "/demo" },
-  { name: "ডেমো", link: "/blog" },
+  { name: "ডেমো", link: "/demo" },
+  { name: "ব্লগ", link: "/blog" },
 ];
 
 const Navbar = () => {

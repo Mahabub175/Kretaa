@@ -30,7 +30,7 @@ const Banner = () => {
               <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-5 font-hind">
                 <Image src={avatar} alt="avatar" width={100} height={100} />
                 <p>
-                  <span className="font-bold">৫০০+ সন্তুষ্ট গ্রাহকের</span>
+                  <span className="font-bold">৫০০+ সন্তুষ্ট গ্রাহকের </span>
                   আস্থার সঙ্গে আপনার ব্যবসাও যুক্ত হোক আজই
                 </p>
               </div>
@@ -38,7 +38,7 @@ const Banner = () => {
                 <span>ব্যবসা হোক ডিজিটাল,</span>
                 <span className="">ই-কমার্স হোক ঝামেলামুক্ত</span>
               </h2>
-              <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor flex flex-col gap-2">
+              <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor flex flex-col gap-2 font-hind">
                 <span>
                   অর্ডার থেকে ডেলিভারি, স্টক থেকে রিপোর্ট — সব এক প্ল্যাটফর্মে
                 </span>
