@@ -31,6 +31,7 @@ const Feature = () => {
               alt={item?.title}
               width={60}
               height={60}
+              unoptimized
               className="w-10 h-10 lg:w-16 lg:h-16 mx-auto"
             />
             <div className="w-full">

@@ -19,7 +19,7 @@ const WhyUs = () => {
           {data?.[0]?.facilities_item?.map((item) => (
             <div
               key={item?.id}
-              className="bg-white p-1 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[170px] lg:w-[45%] xl:w-[30%] h-[250px] font-hind"
+              className="bg-white p-1 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[170px] lg:w-[45%] xl:w-[30%] h-[290px] font-hind"
             >
               <Image
                 src={item?.image}

@@ -50,7 +50,7 @@ const ReviewSlider = () => {
           <SwiperSlide key={item.id}>
             <div
               className={`lg:w-[400px] mx-auto mb-10 flex flex-col items-center lg:items-start transition-opacity duration-300 ${
-                index === activeIndex + 1 ? "opacity-100" : "opacity-50"
+                index === activeIndex + 1 ? "xl:opacity-100" : "xl:opacity-50"
               }`}
             >
               <Image

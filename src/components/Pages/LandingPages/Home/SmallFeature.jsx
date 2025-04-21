@@ -44,7 +44,7 @@ const SmallFeature = () => {
           className={`
          ${item.gradient}
          flex flex-col justify-center items-center gap-5 p-2 lg:p-5 service-radius mx-auto
-         h-[200px] lg:h-[295px]
+         h-[230px] lg:h-[295px]
          w-[160px] md:w-[250px] lg:w-[195px] xl:w-[270px] xxl:w-[330px]
          transition-all duration-500 ease-in-out
         hover:h-[350px]
@@ -61,7 +61,7 @@ const SmallFeature = () => {
             <h3 className="text-xl lg:text-3xl font-semibold mb-2">
               {item.title}
             </h3>
-            <p>{item.description}</p>
+            <p className="font-hind">{item.description}</p>
           </div>
         </div>
       ))}

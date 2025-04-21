@@ -47,75 +47,74 @@ const ContactForm = () => {
     }
   };
   return (
-    <section className="max-w-4xl px-5 mx-auto my-5 lg:my-10 relative -mb-20">
-      <div className="text-center mb-10">
-        <h1 className="text-3xl lg:text-5xl font-semibold mb-4 font-hind">
-          What is <span className="font-bold text-primary">Kretaa?</span>
-        </h1>
-        <p className="text-sm lg:text-base">
-          Kretaa is an easy e-commerce automation tool that helps you quickly
-          create landing pages and websites without any tech skills. It
-          simplifies your online business, saves time, and cuts costs so you can
-          start earning.
-        </p>
-      </div>
-      <Image
-        src={circle}
-        alt="circle"
-        className="absolute top-32 right-10 -z-10"
-      />
-      <Image
-        src={circle}
-        alt="circle"
-        className="absolute -bottom-16 left-16 -z-10"
-      />
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 bg-primaryLight px-5 py-10 lg:p-10 rounded-xl max-w-2xl mx-auto z-10 my-10 lg:my-20"
-      >
-        <CustomInput
-          name="name"
-          placeholder="Your name"
-          ref={nameRef}
-          required
-        />
-        <CustomInput
-          name="number"
-          type="number"
-          placeholder="Your phone number"
-          ref={numberRef}
-          required
-        />
-
-        <div className="grid lg:grid-cols-2 gap-4">
-          <CustomInput
-            name="email"
-            type="email"
-            placeholder="Your email"
-            ref={emailRef}
-            required
-          />
-          <CustomInput
-            name="businessName"
-            placeholder="Your business name"
-            ref={businessNameRef}
-            required
-          />
+    <section className="relative mb-12 lg:mb-44 bg-primaryLight">
+      <div className="my-container flex flex-col lg:flex-row items-start gap-10 font-hind translate-y-10 lg:translate-y-20">
+        <div className="text-center lg:text-start lg:w-3/6">
+          <h1 className="text-4xl lg:text-6xl font-semibold mb-4 font-hind">
+            <span className="font-bold text-primary">Kretaa </span>
+            কি?
+          </h1>
+          <p className="text-base lg:text-lg">
+            <span className="text-primary font-semibold">Kretaa </span>–
+            <span className="font-semibold">
+              ই-কমার্স অটোমেশনের সহজতম সমাধান!
+            </span>{" "}
+            <br /> টেকনিক্যাল স্কিল ছাড়াই এখন মাত্র কয়েক মিনিটেই তৈরি করুন
+            আপনার নিজের ল্যান্ডিং পেজ বা ফুল ফিচার্ড ওয়েবসাইট। স্বল্প খরচে, কম
+            সময়ে ব্যবসা শুরু করুন, আর Kretaa-এর অটোমেটেড সিস্টেম দিয়ে দিন-দিন
+            বাড়ান লাভ। ব্যবসা চালানো হোক সহজ, স্মার্ট আর সম্পূর্ণ আপনার
+            নিয়ন্ত্রণে।
+          </p>
         </div>
-        <CustomInput
-          name="message"
-          type="textarea"
-          placeholder="Your message"
-          ref={messageRef}
-          required
-        />
-        <button
-          type="submit"
-          className="px-4 py-2 bg-primary font-medium text-white rounded-lg w-full"
+
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 bg-white p-10 rounded-lg w-full lg:w-3/6 shadow-xl"
         >
-          Submit
-        </button>
-      </form>
+          <CustomInput
+            name="name"
+            placeholder="আপনার নাম লিখুন"
+            ref={nameRef}
+            required
+          />
+          <CustomInput
+            name="number"
+            type="number"
+            placeholder="মোবাইল নাম্বার লিখুন"
+            ref={numberRef}
+            required
+          />
+
+          <div className="grid lg:grid-cols-2 gap-4">
+            <CustomInput
+              name="email"
+              type="email"
+              placeholder="ইমেইল এড্রেস লিখুন"
+              ref={emailRef}
+              required
+            />
+            <CustomInput
+              name="businessName"
+              placeholder="ব্যবসা প্রতিষ্ঠানের নাম লিখুন"
+              ref={businessNameRef}
+              required
+            />
+          </div>
+          <CustomInput
+            name="message"
+            type="textarea"
+            placeholder="আপনার মেসেজ লিখুন"
+            ref={messageRef}
+            required
+          />
+          <button
+            type="submit"
+            className="px-4 py-3 bg-primary font-medium text-white rounded-lg w-full"
+          >
+            মেসেজ পাঠান
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

@@ -14,11 +14,11 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <Banner />
       <WhyUs />
-      <Brand />
       <Timeline />
       <Feature />
       <DemoSlider />
       <Promotion />
+      <Brand />
       <ReviewSlider />
       <FAQ />
       <CTA />

@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import logo from "@/assets/images/logo.png";
+import Image from "next/image";
 
 const ContactInfo = () => {
   return (
     <div className="px-5 font-hind">
       <div className="mb-10">
         <Link href="/">
-          <span className="text-xl font-bold text-primary">Kretaa</span>
+          <Image src={logo} alt="logo" width={100} height={100} />
         </Link>
       </div>
       <h3 className="text-lg font-bold mb-6">নিড হেল্প?</h3>

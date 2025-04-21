@@ -16,10 +16,10 @@ const Promotion = () => {
     <section className="lg:py-10 pb-10 lg:pb-0">
       <div className="pb-20">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-10 my-container">
-          <div className="text-center lg:text-left">
-            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-hind flex flex-col gap-3">
+          <div className="text-center lg:text-left px-5">
+            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-hind lg:flex lg:flex-col gap-3">
               <span>
-                Kretaa <span className="text-primary font-bold">ই-কমার্স</span>
+                Kretaa <span className="text-primary font-bold">ই-কমার্স </span>
               </span>
               <span className="text-primary font-bold">অটোমেশন সিস্টেম</span>
             </h3>

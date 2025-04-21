@@ -9,7 +9,7 @@ const Connections = () => {
   const { data, loading, error } = useFetchData("/clients/");
 
   return (
-    <section className="bg-primaryLight py-10 mb-10">
+    <section className="bg-primaryLight py-10 mt-10 mb-20 lg:mt-20 lg:mb-10">
       <section className="my-container">
         {loading ? (
           <LoadingAnimation />

@@ -9,12 +9,48 @@ import dayjs from "dayjs";
 const AllBlogs = () => {
   const { data, loading } = useFetchData("/blogs?depth=3");
 
+  const featuredBlog =
+    data?.find((item) => item?.is_featured === true) || undefined;
+
   return (
     <section className="my-container my-5 lg:my-10">
-      <h2 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
-        Recent
-        <span className="font-semibold text-primary"> Blogs</span>
+      {featuredBlog && (
+        <div className="mt-10 mb-20">
+          <div
+            key={featuredBlog.id}
+            className="xl:w-4/6 mx-auto border rounded-xl flex flex-col lg:flex-row items-center gap-10 shadow pb-10 lg:pb-0"
+          >
+            <Image
+              src={featuredBlog.thumbnail}
+              alt="blog"
+              width={500}
+              height={400}
+              className="rounded-t-xl lg:rounded-tr-none lg:rounded-l-xl w-full lg:w-[500px]"
+            />
+            <div className="p-1.5 lg:mt-4 text-sm lg:text-base">
+              <p className="text-gray-600 mb-2 text-center lg:text-start">
+                {dayjs(featuredBlog?.post_date_time).format("MMMM DD, YYYY")}
+              </p>
+              <h3 className="font-medium text-center lg:text-start text-xl">
+                {featuredBlog.title}
+              </h3>
+              <div className="flex flex-col lg:flex-row justify-between items-center mt-4 lg:mt-6 text-center lg:text-start">
+                <Link
+                  href={`/blog/${featuredBlog?.slug}`}
+                  className="text-primary hover:underline font-medium font-hind"
+                >
+                  সম্পূর্ণ লেখাটি পড়ুন &gt;&gt;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <h2 className="text-center text-3xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
+        সাম্প্রতিক
+        <span className="font-semibold text-primary"> ব্লগ সমূহ</span>
       </h2>
+
       {loading ? (
         <LoadingAnimation />
       ) : (
@@ -26,7 +62,7 @@ const AllBlogs = () => {
                 alt="blog"
                 width={360}
                 height={100}
-                className="rounded-t-xl w-full h-[150px] lg:h-[350px]"
+                className="rounded-t-xl w-full h-[150px] lg:h-[200px] xl:h-[300px]"
               />
               <div className="p-1.5 mt-4 text-sm lg:text-base">
                 <h3 className="font-medium text-center lg:text-start">
@@ -38,9 +74,9 @@ const AllBlogs = () => {
                   </p>
                   <Link
                     href={`/blog/${item?.slug}`}
-                    className="text-primary hover:underline font-medium mt-2 lg:mt-0"
+                    className="text-primary hover:underline font-medium mt-2 lg:mt-0 font-hind"
                   >
-                    Read the full article
+                    সম্পূর্ণ লেখাটি পড়ুন &gt;&gt;
                   </Link>
                 </div>
               </div>
@@ -48,11 +84,6 @@ const AllBlogs = () => {
           ))}
         </div>
       )}
-      <div className="flex items-center justify-center my-10">
-        <button className="text-primary bg-primaryLight border border-primary hover:bg-primary hover:text-white duration-300 px-32 lg:px-14 py-2.5 rounded-full font-medium">
-          See All Blogs
-        </button>
-      </div>
     </section>
   );
 };
