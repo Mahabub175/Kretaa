@@ -17,12 +17,15 @@ const Promotion = () => {
       <div className="pb-20">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-10 my-container">
           <div className="text-center lg:text-left">
-            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-hind">
-              Kretaa <span className="text-primary font-bold">ই-কমার্স</span>{" "}
-              <br />{" "}
+            <h3 className="text-3xl lg:text-6xl mb-6 font-medium font-hind flex flex-col gap-3">
+              <span>
+                Kretaa <span className="text-primary font-bold">ই-কমার্স</span>
+              </span>
               <span className="text-primary font-bold">অটোমেশন সিস্টেম</span>
             </h3>
-            <p className="lg:text-lg lg:w-4/6">{ctaData?.[0]?.description}</p>
+            <p className="lg:text-lg lg:w-4/6 font-hind">
+              {ctaData?.[0]?.description}
+            </p>
           </div>
           <div className="relative mt-10 lg:mt-0">
             <div

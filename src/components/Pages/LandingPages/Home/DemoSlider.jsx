@@ -29,21 +29,22 @@ const DemoSlider = () => {
   const [activeTab, setActiveTab] = useState("mobile");
 
   return (
-    <section className="py-10 my-10 bg-primaryLight/50">
+    <section className="py-10 lg:py-32 my-10 bg-primaryLight/50 font-hind">
       <div className="text-center px-5">
         <h3 className="text-3xl lg:text-6xl font-semibold mb-4">
           <span className="text-primary">ডেমো</span> ভার্সন
         </h3>
         <p className="text-base lg:text-lg">
           ডেমো ভার্সনের মাধ্যমে আমাদের সকল ফিচার এক্সপ্লোর করুন এবং বুঝুন কেন
-          আমাদের সলিউশন আপনার ব্যবসার জন্য উপযুক্ত।
+          আমাদের সলিউশন আপনার <br className="hidden lg:block" /> ব্যবসার জন্য
+          উপযুক্ত।
         </p>
       </div>
 
       <div className="py-10">
-        <div className="flex justify-center space-x-6 mb-6 border border-primaryDark p-3 lg:p-5 w-72 mx-auto rounded-xl">
+        <div className="flex justify-center space-x-6 mb-6 border border-primaryDark py-2 w-72 mx-auto rounded-xl">
           <button
-            className={`flex items-center px-4 py-2 rounded-full text-lg font-semibold ${
+            className={`flex items-center px-4 py-2 rounded-full text-lg font-medium ${
               activeTab === "mobile" ? "bg-primaryDark text-white" : ""
             }`}
             onClick={() => setActiveTab("mobile")}
@@ -51,7 +52,7 @@ const DemoSlider = () => {
             <FiSmartphone className="mr-2" /> Mobile
           </button>
           <button
-            className={`flex items-center px-4 py-2 rounded-full text-lg font-semibold ${
+            className={`flex items-center px-4 py-2 rounded-full text-lg font-medium ${
               activeTab === "web" ? "bg-primaryDark text-white" : ""
             }`}
             onClick={() => setActiveTab("web")}
@@ -105,7 +106,7 @@ const DemoSlider = () => {
                         className={`transition-all duration-300 ${
                           isCenter
                             ? "scale-100"
-                            : "scale-90 opacity-80 translate-y-10"
+                            : "scale-90 opacity-50 xxl:translate-y-10"
                         }`}
                       >
                         <Image
@@ -139,13 +140,13 @@ const DemoSlider = () => {
             />
 
             <button
-              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primary text-white border border-primary hover:bg-transparent hover:text-black duration-300 absolute top-[45%] left-5 lg:left-[25%] z-20"
+              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] left-5 lg:left-[25%] z-20"
               onClick={() => swiperRef.current.slidePrev()}
             >
               <FaAngleLeft className="text-xl" />
             </button>
             <button
-              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primary text-white border border-primary hover:bg-transparent hover:text-black duration-300 absolute top-[45%] right-5 lg:right-[25%] z-20"
+              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] right-5 lg:right-[25%] z-20"
               onClick={() => swiperRef.current.slideNext()}
             >
               <FaAngleRight className="text-xl" />

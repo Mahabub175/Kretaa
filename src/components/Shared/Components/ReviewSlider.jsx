@@ -34,7 +34,7 @@ const ReviewSlider = () => {
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          1224: { slidesPerView: 3 },
         }}
         navigation={false}
         pagination={{
@@ -76,21 +76,6 @@ const ReviewSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <div className="flex items-center justify-center gap-5 mt-10">
-        <button
-          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[50%] left-0 z-10"
-          onClick={() => swiperRef.current.slidePrev()}
-        >
-          <FaAngleLeft className="text-xl" />
-        </button>
-        <button
-          className="lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white text-black border border-primary hover:bg-primary hover:text-white duration-300 absolute top-[50%] right-0 z-10"
-          onClick={() => swiperRef.current.slideNext()}
-        >
-          <FaAngleRight className="text-xl" />
-        </button>
-      </div>
     </section>
   );
 };

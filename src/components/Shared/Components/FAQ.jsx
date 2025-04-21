@@ -13,7 +13,7 @@ const FAQ = () => {
         style={{ backgroundImage: `url('/design.png')` }}
       />
       <div className="relative z-10 text-center">
-        <h1 className="text-4xl lg:text-6xl font-semibold mb-5 font-hind">
+        <h1 className="text-4xl lg:text-6xl font-semibold mb-5 font-bricolage">
           FAQs
         </h1>
         <p className="text-sm lg:text-xl font-hind mb-10 lg:mb-20 px-3">

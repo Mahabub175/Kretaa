@@ -66,10 +66,6 @@ const AllDemo = () => {
                 <motion.div
                   key={item.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                   className="lg:w-[360px] mx-auto p-2 rounded-xl border border-transparent hover:border-primary duration-300"
                 >
                   <Image

@@ -34,9 +34,12 @@ const Banner = () => {
                   আস্থার সঙ্গে আপনার ব্যবসাও যুক্ত হোক আজই
                 </p>
               </div>
-              <h2 className="text-3xl lg:text-6xl font-semibold mb-4 lg:mb-6 tracking-wide font-hind flex flex-col gap-4">
+              <h2 className="text-3xl lg:text-6xl font-medium mb-4 lg:mb-6 tracking-wide font-hind flex flex-col gap-4">
                 <span>ব্যবসা হোক ডিজিটাল,</span>
-                <span className="">ই-কমার্স হোক ঝামেলামুক্ত</span>
+                <span>
+                  <span className="font-semibold text-primary">ই-কমার্স </span>
+                  হোক ঝামেলামুক্ত
+                </span>
               </h2>
               <p className="text-sm lg:text-xl mb-8 leading-[25px] lg:leading-[30px] mx-auto text-textColor flex flex-col gap-2 font-hind">
                 <span>

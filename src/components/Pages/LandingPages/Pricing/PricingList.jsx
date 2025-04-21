@@ -5,6 +5,7 @@ import check from "@/assets/images/check.png";
 import cross from "@/assets/images/cross.png";
 import useFetchData from "@/utils/hooks/useFetchData";
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
+import Link from "next/link";
 
 const PricingList = () => {
   const { data: featureData, loading: featureLoading } =
@@ -14,7 +15,7 @@ const PricingList = () => {
 
   return (
     <section className="my-container mb-10 lg:mb-0">
-      <h1 className="text-center text-2xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
+      <h1 className="text-center text-3xl lg:text-6xl font-medium my-5 lg:my-10 font-hind">
         Kretaa-এর মাধ্যমে ব্যবসা হোক সম্পূর্ণ <br className="hidden lg:block" />
         <span className="font-semibold text-primary">অটোমেটেড ও সহজ!</span>
       </h1>
@@ -97,18 +98,21 @@ const PricingList = () => {
                   </tr>
                 ))}
 
-                <tr className="">
+                <tr>
                   <td className="p-4 font-medium border-r-8 border-white"></td>
                   {pricingData?.[0]?.package?.map((plan) => (
                     <td
                       key={plan.id}
                       className="p-4 border-r-8 border-white text-center"
                     >
-                      <button className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-lg font-medium">
+                      <Link
+                        href={"/contact"}
+                        className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-10 py-2 rounded-lg font-medium"
+                      >
                         {plan?.name === "Custom"
                           ? " যোগাযোগ করুন"
                           : "অর্ডার করুন"}
-                      </button>
+                      </Link>
                     </td>
                   ))}
                 </tr>

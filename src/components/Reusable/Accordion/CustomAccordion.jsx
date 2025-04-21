@@ -16,7 +16,7 @@ const CustomAccordion = ({ items }) => {
       {items?.map((item, index) => (
         <div key={item?.id} className="border rounded-lg overflow-hidden">
           <button
-            className="w-full text-left p-4 bg-white font-semibold flex justify-between items-center lg:text-lg"
+            className="w-full text-left p-4 bg-white font-medium flex justify-between items-center lg:text-lg"
             onClick={() => toggleAccordion(index)}
           >
             {item?.question}
