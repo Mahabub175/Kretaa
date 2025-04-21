@@ -63,7 +63,7 @@ const AllDemo = () => {
             {filteredData?.map((item) => (
               <div
                 key={item.id}
-                className="lg:w-[360px] mx-auto p-2 rounded-xl border border-transparent hover:border-primary duration-300"
+                className="lg:w-[360px] mx-auto p-2 rounded-xl border border-transparent hover:border-primary duration-300 shadow-xxl"
               >
                 <Image
                   src={item.thumbnail}

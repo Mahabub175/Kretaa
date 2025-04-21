@@ -22,6 +22,7 @@ export default {
       },
       boxShadow: {
         xl: "0 0 8px 2px #E0F2FE",
+        xxl: "0 0 2px 2px #E0F2FE",
       },
       screens: {
         sm: "580px",
