@@ -2,23 +2,36 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import useFetchData from "@/utils/hooks/useFetchData";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const ReviewSlider = () => {
-  const swiperRef = useRef();
+  const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isReady, setIsReady] = useState(false);
   const { data } = useFetchData("/testimonials/");
+
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (swiperRef.current && data?.length) {
+      swiperRef.current.update();
+    }
+  }, [data]);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
 
+  if (!isReady || !data?.length) return null;
+
   return (
-    <section className="my-container relative lg:my-20">
+    <section className="my-container relative mb-10 lg:my-20">
       <h2 className="text-center text-2xl lg:text-6xl font-semibold tracking-wide font-hind">
         আমাদের গ্রাহকদের
         <span className="font-bold text-primary"> সাফল্যের গল্প</span>
@@ -46,7 +59,7 @@ const ReviewSlider = () => {
         }}
         className="mySwiper mt-10"
       >
-        {data?.map((item, index) => (
+        {data.map((item, index) => (
           <SwiperSlide key={item.id}>
             <div
               className={`lg:w-[400px] mx-auto mb-10 flex flex-col items-center lg:items-start transition-opacity duration-300 ${

@@ -15,11 +15,11 @@ const WhyUs = () => {
           কেন
           <span className="font-bold text-primary"> গেম চেঞ্জার</span>{" "}
         </h2>
-        <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
+        <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-2 lg:gap-5">
           {data?.[0]?.facilities_item?.map((item) => (
             <div
               key={item?.id}
-              className="bg-white p-1 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[170px] lg:w-[45%] xl:w-[30%] h-[290px] font-hind"
+              className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[180px] lg:w-[45%] xl:w-[30%] h-[290px] font-hind"
             >
               <Image
                 src={item?.image}
@@ -32,7 +32,7 @@ const WhyUs = () => {
                 <p className="text-base lg:text-xl mb-2 font-bold">
                   {item?.title}
                 </p>
-                <p className="text-xs lg:text-base">{item?.description}</p>
+                <p className="text-sm lg:text-base">{item?.description}</p>
               </div>
             </div>
           ))}

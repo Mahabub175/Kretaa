@@ -20,11 +20,11 @@ const Feature = () => {
       <h1 className="text-center text-3xl lg:text-6xl font-medium mb-10 lg:mb-20 font-hind">
         আমাদের মূল <span className="font-semibold text-primary">ফিচারসমূহ</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-5">
+      <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-2 lg:gap-5">
         {visibleData.map((item) => (
           <div
             key={item?.id}
-            className="bg-white p-1 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[170px] lg:w-[45%] xl:w-[30%] h-[250px] font-hind"
+            className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[180px] lg:w-[45%] xl:w-[30%] h-[250px] font-hind"
           >
             <Image
               src={item?.icon}
@@ -32,11 +32,13 @@ const Feature = () => {
               width={60}
               height={60}
               unoptimized
-              className="w-10 h-10 lg:w-16 lg:h-16 mx-auto"
+              className="w-14 h-14 lg:w-16 lg:h-16 mx-auto"
             />
             <div className="w-full">
-              <p className="lg:text-xl mb-2 font-bold">{item?.title}</p>
-              <p className="text-xs lg:text-base">{item?.description}</p>
+              <p className="text-base lg:text-xl mb-2 font-bold">
+                {item?.title}
+              </p>
+              <p className="text-sm lg:text-base">{item?.description}</p>
             </div>
           </div>
         ))}

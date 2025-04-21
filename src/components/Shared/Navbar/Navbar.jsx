@@ -24,7 +24,7 @@ const Navbar = () => {
   // const { data } = useFetchData("/system-assets/");
 
   return (
-    <nav className="sticky top-0 w-full z-50 py-3 lg:py-5 bg-white shadow">
+    <nav className="sticky top-0 w-full z-50 py-4 lg:py-5 bg-white shadow">
       <div className="my-container flex items-center justify-between">
         <Link href="/">
           <Image src={logo} alt="logo" width={100} height={100} />
@@ -40,6 +40,7 @@ const Navbar = () => {
                   ? "text-white blue-gradient rounded-full px-5 py-1"
                   : "py-1 hover:text-primary"
               }`}
+              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>
@@ -49,13 +50,12 @@ const Navbar = () => {
         <div className="hidden lg:flex">
           <Link href="/contact">
             <button
-              className={`font-hind border border-primary px-10 py-2 rounded-full font-medium duration-300
-    ${
-      pathname === "/contact"
-        ? "bg-primary text-white"
-        : "bg-primaryLight text-primary hover:bg-primary hover:text-white"
-    }
-  `}
+              className={`font-hind border border-primary px-10 py-2 rounded-full font-medium duration-300 ${
+                pathname === "/contact"
+                  ? "bg-primary text-white"
+                  : "bg-primaryLight text-primary hover:bg-primary hover:text-white"
+              }`}
+              onClick={() => setIsOpen(false)}
             >
               যোগাযোগ করুন
             </button>
@@ -85,19 +85,19 @@ const Navbar = () => {
                     ? "text-white blue-gradient rounded-full px-5 py-1"
                     : "py-1 hover:text-primary"
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
             <Link href="/contact">
               <button
-                className={`font-hind border border-primary px-10 py-2 rounded-full font-medium duration-300
-    ${
-      pathname === "/contact"
-        ? "bg-primary text-white"
-        : "bg-primaryLight text-primary hover:bg-primary hover:text-white"
-    }
-  `}
+                className={`font-hind border border-primary px-10 py-2 rounded-full font-medium duration-300 ${
+                  pathname === "/contact"
+                    ? "bg-primary text-white"
+                    : "bg-primaryLight text-primary hover:bg-primary hover:text-white"
+                }`}
+                onClick={() => setIsOpen(false)}
               >
                 যোগাযোগ করুন
               </button>

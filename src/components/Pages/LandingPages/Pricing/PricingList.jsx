@@ -25,7 +25,7 @@ const PricingList = () => {
       ) : (
         <div>
           <div className="overflow-x-auto">
-            <table className="min-w-full">
+            <table className="min-w-full price-table">
               <thead>
                 <tr className="bg-primaryLight">
                   <th className="p-4 lg:text-xl text-left border-r-8 border-white">
