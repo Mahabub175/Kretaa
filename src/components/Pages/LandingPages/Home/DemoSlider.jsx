@@ -9,20 +9,8 @@ import "swiper/css/navigation";
 import { FiSmartphone, FiMonitor } from "react-icons/fi";
 import mobileFrame from "@/assets/images/mobile.png";
 import laptopFrame from "@/assets/images/laptop.png";
-import mobileSS from "@/assets/images/mobileSS.png";
-import laptopSS from "@/assets/images/laptopSS.png";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-
-const data = [
-  { id: 1, name: "demo one", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 2, name: "demo two", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 3, name: "demo three", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 4, name: "demo four", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 5, name: "demo five", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 6, name: "demo six", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 7, name: "demo seven", mobileImage: mobileSS, laptopImage: laptopSS },
-  { id: 8, name: "demo eight", mobileImage: mobileSS, laptopImage: laptopSS },
-];
+import { demoData } from "@/assets/data/demoData";
 
 const DemoSlider = () => {
   const swiperRef = useRef();
@@ -73,33 +61,24 @@ const DemoSlider = () => {
                 640: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
-                1220: { slidesPerView: 5 },
+                1220: { slidesPerView: 4 },
+                1400: { slidesPerView: 5 },
               }}
               spaceBetween={20}
               loop
               navigation={false}
               className="mySwiper"
             >
-              {data.map((item) => (
+              {demoData?.map((item) => (
                 <SwiperSlide key={item.id} className="flex justify-center">
                   {({ isActive }) => {
                     const isCenter = isActive;
-                    const width =
-                      activeTab === "mobile"
-                        ? isCenter
-                          ? 225
-                          : 180
-                        : isCenter
-                        ? 280
-                        : 220;
-                    const height =
-                      activeTab === "mobile"
-                        ? isCenter
-                          ? 500
-                          : 420
-                        : isCenter
-                        ? 320
-                        : 260;
+
+                    const mobileWidth = isCenter ? 225 : 180;
+                    const mobileHeight = isCenter ? 500 : 420;
+
+                    const webWidth = isCenter ? 800 : 200;
+                    const wenHeight = isCenter ? 700 : 260;
 
                     return (
                       <div
@@ -116,10 +95,20 @@ const DemoSlider = () => {
                               : item.laptopImage
                           }
                           alt="Screenshot"
-                          width={width}
-                          height={height}
-                          className={`rounded-xl mx-auto ${
-                            activeTab === "web" ? "-translate-x-2 mb-2" : ""
+                          width={
+                            activeTab === "mobile" ? mobileWidth : webWidth
+                          }
+                          height={
+                            activeTab === "mobile" ? mobileHeight : wenHeight
+                          }
+                          className={`mx-auto object-cover ${
+                            activeTab === "web"
+                              ? "w-[580px] h-[180px] -translate-x-2"
+                              : ""
+                          } ${
+                            !isCenter
+                              ? "lg:translate-y-12 xxl:translate-y-0"
+                              : ""
                           }`}
                         />
                       </div>
@@ -132,10 +121,10 @@ const DemoSlider = () => {
             <Image
               src={activeTab === "mobile" ? mobileFrame : laptopFrame}
               alt="Device Frame"
-              width={activeTab === "mobile" ? 250 : 500}
-              height={activeTab === "mobile" ? 500 : 350}
+              width={activeTab === "mobile" ? 245 : 520}
+              height={activeTab === "mobile" ? 480 : 350}
               className={`pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 ${
-                activeTab === "mobile" ? "" : ""
+                activeTab === "mobile" ? "" : "mt-1"
               }`}
             />
 
