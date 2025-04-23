@@ -11,6 +11,7 @@ import mobileFrame from "@/assets/images/mobile.png";
 import laptopFrame from "@/assets/images/laptop.png";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { demoData } from "@/assets/data/demoData";
+import Link from "next/link";
 
 const DemoSlider = () => {
   const swiperRef = useRef();
@@ -81,7 +82,9 @@ const DemoSlider = () => {
                     const wenHeight = isCenter ? 700 : 260;
 
                     return (
-                      <div
+                      <Link
+                        href={item?.link}
+                        target="_blank"
                         className={`transition-all duration-300 ${
                           isCenter
                             ? "scale-100"
@@ -111,7 +114,7 @@ const DemoSlider = () => {
                               : ""
                           }`}
                         />
-                      </div>
+                      </Link>
                     );
                   }}
                 </SwiperSlide>

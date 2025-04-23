@@ -2,8 +2,6 @@
 
 import { useRef } from "react";
 import CustomInput from "@/components/Reusable/Form/CustomInput";
-import circle from "@/assets/images/circle.png";
-import Image from "next/image";
 import { base_url } from "@/utils/configs/base_api";
 import { toast } from "sonner";
 const ContactForm = () => {

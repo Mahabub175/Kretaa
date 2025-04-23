@@ -24,12 +24,12 @@ const PricingList = () => {
         <LoadingAnimation />
       ) : (
         <div>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto font-hind">
             <table className="min-w-full price-table">
               <thead>
                 <tr className="bg-primaryLight">
                   <th className="p-4 lg:text-xl text-left border-r-8 border-white">
-                    Perfect Package for you
+                    স্মার্ট প্যাকেজ, স্মার্ট ব্যবসা
                   </th>
                   {pricingData?.[0]?.package?.map((plan) => (
                     <th
@@ -39,23 +39,35 @@ const PricingList = () => {
                       <div className="font-bold text-xl lg:text-2xl">
                         {plan.name}
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-gray-600 font-normal">
                         {plan.descriptions}
                       </div>
-                      {plan.offer_price && (
-                        <div className="mt-2">
-                          <div className="flex items-center justify-center gap-2">
-                            <span className="line-through text-red-500 text-lg">
-                              {plan.regular_price}
-                            </span>
-                            <span className="font-normal text-sm">
-                              ({plan.time_period})
+                      {plan.offer_price &&
+                        plan?.name?.toLowerCase() !== "custom" && (
+                          <div className="mt-1">
+                            <div className="flex items-center justify-center">
+                              <span className="line-through text-red-500 text-lg">
+                                ৳{plan.regular_price}
+                              </span>
+                            </div>
+                            <span className="font-semibold text-2xl text-primary">
+                              ৳{plan.offer_price}
                             </span>
                           </div>
-                          <span className="font-bold text-2xl text-primary">
-                            {plan.offer_price}
-                          </span>
-                        </div>
+                        )}
+                      {(!plan.offer_price || plan.offer_price === 0) &&
+                        plan?.name?.toLowerCase() !== "custom" && (
+                          <div className="mt-1">
+                            <span className="font-semibold text-2xl text-primary">
+                              ৳{plan.offer_price}
+                            </span>
+                          </div>
+                        )}
+
+                      {plan?.name?.toLowerCase() !== "custom" && (
+                        <span className="font-normal text-sm">
+                          ({plan.time_period})
+                        </span>
                       )}
                     </th>
                   ))}
@@ -103,14 +115,14 @@ const PricingList = () => {
                   {pricingData?.[0]?.package?.map((plan) => (
                     <td
                       key={plan.id}
-                      className="p-4 border-r-8 border-white text-center"
+                      className="py-4 xl:p-4 border-r-8 border-white text-center"
                     >
                       <Link
                         href={"/contact"}
-                        className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-4 lg:px-10 py-2 rounded-lg font-medium"
+                        className="text-primary bg-primaryLight font-hind border border-primary hover:bg-primary hover:text-white duration-300 px-0.5 xl:px-10 py-2 rounded-lg font-medium"
                       >
                         {plan?.name === "Custom"
-                          ? " যোগাযোগ করুন"
+                          ? "যোগাযোগ করুন"
                           : "অর্ডার করুন"}
                       </Link>
                     </td>

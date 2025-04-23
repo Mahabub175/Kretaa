@@ -4,8 +4,8 @@ const CTA = () => {
   return (
     <section className="bg-primary py-20 lg:py-32">
       <div className="my-container text-white flex flex-col items-center text-center font-hind">
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6 font-hind">
-          আপনার ব্র্যান্ড গড়ে তুলুন ডিজিটাল দুনিয়ায় — Kretaa-এর সাথে
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6 font-hind">
+          আপনার ব্র্যান্ড গড়ে তুলুন ডিজিটাল দুনিয়ায় — Kretaa - এর সাথে
         </h2>
         <p className="text-lg">
           হাজারো সফল উদ্যোক্তার সাথে এবার আপনার পালা — শুরু করুন আজই।

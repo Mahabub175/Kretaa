@@ -14,36 +14,53 @@ import borkhaMobile from "@/assets/images/borkha-mobile.png";
 import borkhaWeb from "@/assets/images/borkha-web.png";
 
 export const demoData = [
-  { id: 1, name: "Tools", mobileImage: toolsMobile, laptopImage: toolsWeb },
+  {
+    id: 1,
+    name: "Tools",
+    mobileImage: toolsMobile,
+    laptopImage: toolsWeb,
+    link: "https://tools.moonsgallerysystem.com/",
+  },
   {
     id: 2,
     name: "Grocery",
     mobileImage: groceryMobile,
     laptopImage: groceryWeb,
+    link: "https://grocery.moonsgallerysystem.com/",
   },
   {
     id: 3,
     name: "Cosmetics",
     mobileImage: cosmeticMobile,
     laptopImage: cosmeticWeb,
+    link: "https://cosmetics.moonsgallerysystem.com/",
   },
-  { id: 4, name: "Baby Care", mobileImage: babyMobile, laptopImage: babyWeb },
+  {
+    id: 4,
+    name: "Baby Care",
+    mobileImage: babyMobile,
+    laptopImage: babyWeb,
+    link: "https://baby.moonsgallerysystem.com/",
+  },
   {
     id: 5,
     name: "Organic",
     mobileImage: organicMobile,
     laptopImage: organicWeb,
+    link: "https://organic.moonsgallerysystem.com/",
   },
   {
     id: 6,
     name: "Multi Purpose",
     mobileImage: multiMobile,
     laptopImage: multiWeb,
+    link: "https://multipurpose.moonsgallerysystem.com/",
   },
   {
     id: 7,
     name: "Borkha",
     mobileImage: borkhaMobile,
     laptopImage: borkhaWeb,
+    link: "https://fashion.moonsgallerysystem.com/",
   },
 ];
