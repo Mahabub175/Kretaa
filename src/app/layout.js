@@ -1,6 +1,8 @@
 import { Bricolage_Grotesque, Hind_Siliguri, Inter } from "next/font/google";
 import "./globals.css";
 import GlobalProvider from "@/provider/GlobalProvider";
+import { GoogleTagManager } from "@next/third-parties/google";
+import SEOHead from "@/components/Shared/SEOHead";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,12 +24,14 @@ const hindSiliguri = Hind_Siliguri({
 
 export const metadata = {
   title: "Kretaa",
-  description: "",
+  description: "Complete E-Commerce Solution",
 };
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <SEOHead />
+      <GoogleTagManager gtmId="GTM-WWP6CP2W" />
       <body
         className={`${inter.variable} ${bricolage.variable} ${hindSiliguri.variable}  antialiased`}
       >

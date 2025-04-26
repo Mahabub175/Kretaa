@@ -8,9 +8,15 @@ import right from "@/assets/images/right.png";
 import avatar from "@/assets/images/avatar.png";
 import Image from "next/image";
 import SmallFeature from "./SmallFeature";
+import { useEffect } from "react";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const Banner = () => {
   const { data, loading } = useFetchData("/hero/");
+
+  useEffect(() => {
+    sendGTMEvent({ event: "pageView", value: "Home Page View" });
+  }, [data]);
 
   return (
     <section className="relative overflow-hidden">
