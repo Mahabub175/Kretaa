@@ -25,7 +25,7 @@ const AllDemo = () => {
       event_source_url: url,
     };
     postData(data);
-  }, [data]);
+  }, [data, url, postData]);
 
   useEffect(() => {
     if (data) {

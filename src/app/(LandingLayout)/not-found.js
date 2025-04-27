@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const NotFound = () => {
@@ -19,14 +20,14 @@ const NotFound = () => {
       >
         <h1 className="text-6xl font-bold text-red-500 animate-pulse">404</h1>
         <p className="text-xl text-gray-600 mt-2 animate-fadeIn">
-          Oops! The page you're looking for doesn't exist.
+          Oops! The page you&apos;re looking for doesn&apos;t exist.
         </p>
-        <a
+        <Link
           href="/"
           className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg"
         >
           Go Back Home
-        </a>
+        </Link>
       </div>
     </div>
   );
