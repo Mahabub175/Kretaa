@@ -9,29 +9,25 @@ const footerData = [
   {
     title: "গ্রাহকের একাউন্ট",
     links: [
-      { name: "লগ ইন", to: "/" },
-      { name: "সাইন আপ", to: "/" },
       { name: "যোগাযোগ", to: "/contact" },
-      { name: "টার্মস এন্ড কন্ডিশনস", to: "/" },
-      { name: "প্রাইভেসি পলিসি", to: "/" },
+      { name: "টার্মস এন্ড কন্ডিশনস", to: "/terms-and-conditions" },
+      { name: "প্রাইভেসি পলিসি", to: "/privacy-policy" },
     ],
   },
   {
     title: "প্রয়োজনীয় পেইজ",
     links: [
-      { name: "ফিচার", to: "/pricing" },
+      { name: "ডেমো", to: "/demo" },
       { name: "প্রাইসিং", to: "/pricing" },
-      { name: "ফ্রড চেকার", to: "/" },
-      { name: "হেল্প পোস্ট", to: "/" },
-      { name: "বিজনেস  গ্রোথ", to: "/" },
+      { name: "হেল্প পোস্ট", to: "/blog" },
     ],
   },
   {
     title: "পেমেন্ট",
     links: [
-      { name: "পেমেন্ট গেটওয়ে", to: "/" },
-      { name: "রিফান্ড পলিসি", to: "/" },
-      { name: "প্রাইভেসি পলিসি", to: "/" },
+      { name: "পেমেন্ট গেটওয়ে", to: "/payment-gateway" },
+      { name: "রিফান্ড পলিসি", to: "/refund-policy" },
+      { name: "প্রাইভেসি পলিসি", to: "/privacy-policy" },
     ],
   },
 ];

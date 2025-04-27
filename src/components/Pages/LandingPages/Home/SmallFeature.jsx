@@ -47,7 +47,7 @@ const SmallFeature = () => {
          h-[230px] lg:h-[295px]
          w-[160px] md:w-[250px] lg:w-[195px] xl:w-[270px] xxl:w-[330px]
          transition-all duration-500 ease-in-out
-        hover:h-[350px]
+        lg:hover:h-[350px]
        `}
         >
           <div

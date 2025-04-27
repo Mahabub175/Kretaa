@@ -5,12 +5,28 @@ import useFetchData from "@/utils/hooks/useFetchData";
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
 import Image from "next/image";
 import dayjs from "dayjs";
+import useFullUrl from "@/utils/hooks/useGetURL";
+import useConversionApi from "@/utils/hooks/useConversionApi";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { useEffect } from "react";
 
 const AllBlogs = () => {
   const { data, loading } = useFetchData("/blogs?depth=3");
 
   const featuredBlog =
     data?.find((item) => item?.is_featured === true) || undefined;
+
+  const url = useFullUrl();
+  const { postData } = useConversionApi();
+
+  useEffect(() => {
+    sendGTMEvent({ event: "Blog-PageView", value: url });
+    const data = {
+      event_name: "Blog-PageView",
+      event_source_url: url,
+    };
+    postData(data);
+  }, [data]);
 
   return (
     <section className="my-container my-5 lg:my-10">

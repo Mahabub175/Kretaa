@@ -10,12 +10,22 @@ import Image from "next/image";
 import SmallFeature from "./SmallFeature";
 import { useEffect } from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import useFullUrl from "@/utils/hooks/useGetURL";
+import useConversionApi from "@/utils/hooks/useConversionApi";
 
 const Banner = () => {
   const { data, loading } = useFetchData("/hero/");
 
+  const url = useFullUrl();
+  const { postData } = useConversionApi();
+
   useEffect(() => {
-    sendGTMEvent({ event: "pageView", value: "Home Page View" });
+    sendGTMEvent({ event: "PageView", value: url });
+    const data = {
+      event_name: "PageView",
+      event_source_url: url,
+    };
+    postData(data);
   }, [data]);
 
   return (

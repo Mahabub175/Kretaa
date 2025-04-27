@@ -10,8 +10,7 @@ const WhyUs = () => {
     <section className="-mt-16 lg:-mt-0 mb-20">
       <div className="my-container">
         <h2 className="text-center text-2xl lg:text-6xl font-semibold pt-16 xl:pt-20 tracking-wide font-hind">
-          আপনার অনলাইন শপের জন্য Kretaa
-          <br className="hidden lg:block" />
+          আপনার অনলাইন শপের জন্য Kretaa <br className="hidden lg:block" />
           কেন
           <span className="font-bold text-primary"> গেম চেঞ্জার</span>{" "}
         </h2>
@@ -19,7 +18,7 @@ const WhyUs = () => {
           {data?.[0]?.facilities_item?.map((item) => (
             <div
               key={item?.id}
-              className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[180px] lg:w-[45%] xl:w-[30%] h-[290px] font-hind"
+              className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight shadow-xl hover:border-primary duration-300 w-[175px] lg:w-[45%] xl:w-[30%] h-[170px] md:h-[290px] font-hind"
             >
               <Image
                 src={item?.image}
@@ -32,7 +31,9 @@ const WhyUs = () => {
                 <p className="text-base lg:text-xl mb-2 font-bold">
                   {item?.title}
                 </p>
-                <p className="text-sm lg:text-base">{item?.description}</p>
+                <p className="hidden md:block text-sm lg:text-base">
+                  {item?.description}
+                </p>
               </div>
             </div>
           ))}

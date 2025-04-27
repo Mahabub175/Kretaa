@@ -57,7 +57,7 @@ const Navbar = () => {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              যোগাযোগ করুন
+              বিস্তরিত জানুন
             </button>
           </Link>
         </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                যোগাযোগ করুন
+                বিস্তরিত জানুন
               </button>
             </Link>
           </motion.div>

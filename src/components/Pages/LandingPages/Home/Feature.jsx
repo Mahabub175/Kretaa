@@ -24,7 +24,7 @@ const Feature = () => {
         {visibleData.map((item) => (
           <div
             key={item?.id}
-            className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[180px] lg:w-[45%] xl:w-[30%] h-[250px] font-hind"
+            className="bg-white p-2 lg:p-10 rounded-lg flex flex-col justify-center text-center items-center gap-5 border border-primaryLight hover:border-primary duration-300 w-[175px] lg:w-[45%] xl:w-[30%] md:h-[250px] font-hind"
           >
             <Image
               src={item?.icon}
@@ -38,7 +38,9 @@ const Feature = () => {
               <p className="text-base lg:text-xl mb-2 font-bold">
                 {item?.title}
               </p>
-              <p className="text-sm lg:text-base">{item?.description}</p>
+              <p className="hidden md:block text-sm lg:text-base">
+                {item?.description}
+              </p>
             </div>
           </div>
         ))}

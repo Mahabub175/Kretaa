@@ -4,6 +4,11 @@ import { useRef } from "react";
 import CustomInput from "@/components/Reusable/Form/CustomInput";
 import { base_url } from "@/utils/configs/base_api";
 import { toast } from "sonner";
+import useFullUrl from "@/utils/hooks/useGetURL";
+import useConversionApi from "@/utils/hooks/useConversionApi";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { useEffect } from "react";
+
 const ContactForm = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -11,12 +16,30 @@ const ContactForm = () => {
   const businessNameRef = useRef(null);
   const messageRef = useRef(null);
 
+  const url = useFullUrl();
+  const { postData } = useConversionApi();
+
+  useEffect(() => {
+    sendGTMEvent({ event: "InitiateCheckout", value: url });
+    const data = {
+      event_name: "InitiateCheckout",
+      event_source_url: url,
+    };
+    postData(data);
+  }, [url]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const name = nameRef.current.value;
+    const [firstName, lastName = ""] = name.split(" ");
+
+    const email = emailRef.current.value || `${firstName}@gmail.com`;
+
     const formData = {
-      name: nameRef.current.value,
+      name: name,
       phone_number: numberRef.current.value,
-      email: emailRef.current.value,
+      email: email,
       business_name: businessNameRef.current.value,
       message: messageRef.current.value,
     };
@@ -31,6 +54,25 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
+        const data = {
+          event_name: "Lead",
+          event_source_url: url,
+          user_data: {
+            fn: [firstName],
+            ln: [lastName],
+            em: [email],
+            ph: [numberRef.current.value],
+            ct: ["Dhaka"],
+            st: ["Dhaka"],
+            zp: ["1207"],
+            country: ["BD"],
+          },
+          custom_data: {
+            value: 200,
+            currency: "BDT",
+          },
+        };
+        postData(data);
         toast.success("Message sent successfully!");
         nameRef.current.value = "";
         numberRef.current.value = "";
@@ -44,6 +86,7 @@ const ContactForm = () => {
       console.error("Error:", error);
     }
   };
+
   return (
     <section className="relative mb-12 lg:mb-44 bg-primaryLight">
       <div className="my-container flex flex-col lg:flex-row items-start gap-10 font-hind translate-y-10 lg:translate-y-20">
@@ -77,7 +120,7 @@ const ContactForm = () => {
           />
           <CustomInput
             name="number"
-            type="number"
+            type="number-string"
             placeholder="মোবাইল নাম্বার লিখুন"
             ref={numberRef}
             required
@@ -89,7 +132,6 @@ const ContactForm = () => {
               type="email"
               placeholder="ইমেইল এড্রেস লিখুন"
               ref={emailRef}
-              required
             />
             <CustomInput
               name="businessName"
@@ -101,7 +143,7 @@ const ContactForm = () => {
           <CustomInput
             name="message"
             type="textarea"
-            placeholder="আপনার মেসেজ লিখুন"
+            placeholder="আপনার মূল্যবান প্রশ্নটি করুন"
             ref={messageRef}
             required
           />
@@ -109,7 +151,7 @@ const ContactForm = () => {
             type="submit"
             className="px-4 py-3 bg-primary font-medium text-white rounded-lg w-full"
           >
-            মেসেজ পাঠান
+            সাবমিট করুন
           </button>
         </form>
       </div>

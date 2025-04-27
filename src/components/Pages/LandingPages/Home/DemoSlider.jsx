@@ -106,7 +106,7 @@ const DemoSlider = () => {
                           }
                           className={`mx-auto object-cover ${
                             activeTab === "web"
-                              ? "w-[220px] h-[140px] lg:w-[580px] lg:h-[180px] -translate-x-2"
+                              ? "w-[215px] h-[135px] md:w-[580px] md:h-[180px] -translate-x-2"
                               : ""
                           } ${
                             !isCenter
