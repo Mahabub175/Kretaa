@@ -1,5 +1,6 @@
 "use client";
 
+import Chat from "@/components/Shared/Chat";
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
 import useFetchData from "@/utils/hooks/useFetchData";
 import { Toaster } from "sonner";
@@ -14,9 +15,9 @@ const GlobalProvider = ({ children }) => {
     );
   return (
     <>
-      {" "}
       <Toaster richColors duration={2000} position="top-center" />
       {children}
+      <Chat />
     </>
   );
 };

@@ -79,7 +79,7 @@ const DemoSlider = () => {
                     const mobileHeight = isCenter ? 500 : 420;
 
                     const webWidth = isCenter ? 800 : 200;
-                    const wenHeight = isCenter ? 700 : 260;
+                    const webHeight = isCenter ? 700 : 260;
 
                     return (
                       <Link
@@ -102,11 +102,11 @@ const DemoSlider = () => {
                             activeTab === "mobile" ? mobileWidth : webWidth
                           }
                           height={
-                            activeTab === "mobile" ? mobileHeight : wenHeight
+                            activeTab === "mobile" ? mobileHeight : webHeight
                           }
                           className={`mx-auto object-cover ${
                             activeTab === "web"
-                              ? "w-[580px] h-[180px] -translate-x-2"
+                              ? "w-[220px] h-[140px] lg:w-[580px] lg:h-[180px] -translate-x-2"
                               : ""
                           } ${
                             !isCenter
@@ -132,13 +132,13 @@ const DemoSlider = () => {
             />
 
             <button
-              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] left-5 lg:left-[25%] z-20"
+              className="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] left-5 lg:left-[25%] z-20"
               onClick={() => swiperRef.current.slidePrev()}
             >
               <FaAngleLeft className="text-xl" />
             </button>
             <button
-              className="lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] right-5 lg:right-[25%] z-20"
+              className="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primaryDark text-white border border-primaryDark hover:bg-white hover:text-black duration-300 absolute top-[45%] right-5 lg:right-[25%] z-20"
               onClick={() => swiperRef.current.slideNext()}
             >
               <FaAngleRight className="text-xl" />
