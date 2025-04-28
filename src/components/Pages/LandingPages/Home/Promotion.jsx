@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import video from "@/assets/images/video.png";
+import video from "@/assets/images/promotion.png";
 import { FaPlay } from "react-icons/fa";
 import useFetchData from "@/utils/hooks/useFetchData";
 import { useState } from "react";
