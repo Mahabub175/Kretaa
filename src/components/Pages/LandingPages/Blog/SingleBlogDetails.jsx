@@ -16,14 +16,17 @@ const SingleBlogDetails = ({ params }) => {
       {loading ? (
         <LoadingAnimation />
       ) : (
-        <section className="my-container my-5 lg:my-10">
+        <section className="my-container my-5 lg:my-10 font-hind">
+          <h2 className="text-3xl lg:text-5xl font-medium text-center mt-16 mb-10">
+            {item?.title}
+          </h2>
           <div className="relative">
             <Image
               src={item.thumbnail}
               alt="blog"
               width={2000}
               height={100}
-              className="rounded-xl w-full lg:h-[600px]"
+              className="rounded-xl w-full lg:h-fit"
             />
             <div className="flex justify-start items-center gap-10 mt-5 lg:mt-10 px-5 lg:px-12 py-2 absolute bottom-0 right-0 bg-white text-black/70 rounded-tl-xl">
               <div className="flex items-center gap-2">
