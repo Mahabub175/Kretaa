@@ -11,9 +11,9 @@ const CTA = () => {
           হাজারো সফল উদ্যোক্তার সাথে এবার আপনার পালা — শুরু করুন আজই।
         </p>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 mt-10">
-          <Link href={"/contact"}>
+          <Link href={"/pricing"}>
             <button className="text-primary bg-white border border-white hover:bg-primary hover:text-white duration-300 px-14 py-2.5 rounded-full font-medium">
-              ফ্রি একাউন্ট খুলুন
+              বিস্তারিত জানুন
             </button>
           </Link>
           <Link href={"/contact"}>
