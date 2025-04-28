@@ -26,7 +26,7 @@ const AllBlogs = () => {
       event_source_url: url,
     };
     postData(data);
-  }, [data, url, postData]);
+  }, []);
 
   return (
     <section className="my-container my-5 lg:my-10">

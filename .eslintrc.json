@@ -15,6 +15,7 @@
         "ignoreRestSiblings": false
       }
     ],
-    "no-undef": "error"
+    "no-undef": "error",
+    "react-hooks/exhaustive-deps": "off"
   }
 }

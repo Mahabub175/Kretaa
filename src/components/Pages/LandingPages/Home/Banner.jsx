@@ -26,7 +26,7 @@ const Banner = () => {
       event_source_url: url,
     };
     postData(data);
-  }, [data, url, postData]);
+  }, []);
 
   return (
     <section className="relative overflow-hidden">

@@ -27,7 +27,7 @@ const PricingList = () => {
       event_source_url: url,
     };
     postData(data);
-  }, [featureData, pricingData, url, postData]);
+  }, []);
 
   return (
     <section className="my-container mb-10 lg:mb-0">

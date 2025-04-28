@@ -26,7 +26,7 @@ const ContactForm = () => {
       event_source_url: url,
     };
     postData(data);
-  }, [url, postData]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
