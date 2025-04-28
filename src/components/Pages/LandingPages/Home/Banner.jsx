@@ -64,11 +64,7 @@ const Banner = () => {
                 <span>ই-কমার্স ব্যবসা এবার হবে স্মার্ট ও নির্ভরযোগ্য।</span>
               </p>
               <div className="flex flex-col lg:flex-row items-center gap-5 justify-center">
-                <Link
-                  href={`${
-                    data?.[0]?.button_link ? data?.[0]?.button_link : "/contact"
-                  }`}
-                >
+                <Link href={`/demo`}>
                   <button className="text-white bg-primary border border-primary hover:bg-primaryLight hover:text-primary duration-300 px-20 lg:px-14 py-2.5 rounded-full font-medium font-hind">
                     বিস্তারিত দেখুন
                     <CgArrowTopRight className="inline-block ml-1" />
