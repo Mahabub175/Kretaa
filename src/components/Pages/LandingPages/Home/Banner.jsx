@@ -1,7 +1,6 @@
 "use client";
 
 import LoadingAnimation from "@/components/Shared/Components/LoadingAnimation";
-import useFetchData from "@/utils/hooks/useFetchData";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
 import right from "@/assets/images/right.png";
@@ -14,8 +13,6 @@ import useFullUrl from "@/utils/hooks/useGetURL";
 import useConversionApi from "@/utils/hooks/useConversionApi";
 
 const Banner = () => {
-  const { data, loading } = useFetchData("/hero/");
-
   const url = useFullUrl();
   const { postData } = useConversionApi();
 
