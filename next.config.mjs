@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "kretaa.vitasoftsolutions.com", "server.kretaa.xyz"],
+    domains: ["localhost", "kretaaserver.eddoktapos.xyz", "server.kretaa.xyz"],
   },
 };
 
